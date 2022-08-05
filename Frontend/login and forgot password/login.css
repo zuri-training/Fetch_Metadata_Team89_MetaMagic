@@ -28,6 +28,7 @@ input[type=text], input[type=password]{
     border: 2px solid #D0D0D0;
     border-radius: 4px;
     color: #2A2A2A;
+    font-size: 14px;
     background: #F6F6F6;
 }
 label{
@@ -44,11 +45,7 @@ label.lbl{
     gap: 52px;
     width: 315px;
     height: 16px;
-    flex: none;
-    order: 2;
-    flex-grow: 0;
     white-space: nowrap;
-
 }
 .password {
     position: relative;
@@ -61,7 +58,7 @@ label.abcd {
     margin-left: 1.9em;
     display: block;
     position: relative;
-    margin-top: -1.4em;
+    margin-top: -1.2em;
     line-height: 1.2em;
     color: #ADADAD;
 }
@@ -78,10 +75,10 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: purple;
+    color: #FC9242;
 }
 label, p{
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 18px;
 }
@@ -146,8 +143,9 @@ label:hover{
     background-color: #082449;
 }
 .btn-primary:hover {
-    background-color: #155BB7;
-    }
+    background: #114993;
+    color: #FFFFFF;
+}
 .center-box{
     margin: auto;
     width: 28%;
@@ -157,6 +155,9 @@ label:hover{
 .arrow{
     width: 90%;
     margin: auto;
+}
+.arrow:hover, .bck:hover{
+    color: #FC9242;
 }
 .bck{
     margin-left: 3.0em;

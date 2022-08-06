@@ -2,6 +2,9 @@
 * {
     box-sizing: border-box;
 }
+* {
+  border: 1px solid red !important;
+}
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   background: #F6F6F6;
@@ -116,12 +119,65 @@ nav ul .blue{
 }
 /* nav bar ends here */
 /* you can code the rest of the body here */
+main {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #F6F6F6;
+  margin: 0;
+}
+.content {
+  display: flex;
+}
+.about_header{
+  /* display: flexbox; */
+  width: fit-content;
+}
+.about_us{
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #196DDC;
+  align-items: center;
+  padding-left: 30%;
+  margin-bottom: 15px;
+}
+.paragraph{
+  font-family: 'IBM Plex Sans' sans-serif;
+  color: #2A2A2A;
+  text-align: left;
+  padding-left: 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+}
+.img{
+  width: 60%;
+  object-fit: cover;
+} 
+.container{
+  display: flex;
+  justify-content: center;
+}
+.team_profile{
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #196DDC;
+}
+.team-name{
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-align: center;
+  color: #196DDC;
+}
+.container-2{
+  display: flex;
+  justify-content: center;
+  display: flex;
+}
+.team-description{
+
+}
 /* footer starts here */
 footer{
   position: absolute;
   width: 100%;
   height: 304px;
-  top: 4090px;
   background: #114993;
   display: flex;
   justify-content: space-between;
@@ -163,3 +219,14 @@ footer ul a:hover{
   margin-left: 25px;
 }
 /* mobile view should come in here */
+@media only screen and (max-width: 420px) {
+  .content {
+    display: block;
+  }
+  .img {
+    width: fit-content;
+  }
+  footer{
+    width: 420px;
+  }
+}

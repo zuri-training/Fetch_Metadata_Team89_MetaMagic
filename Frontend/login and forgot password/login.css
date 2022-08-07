@@ -6,14 +6,13 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     background: #F6F6F6;
     margin: 0;
-    cursor: pointer;
 }
 .container{
     background: #F6F6F6;
     padding: 0 150px;
     margin: 0 auto;
     height: auto;
-    width: 1550px;
+    width: 1440px;
     max-width: 100%;
     overflow: hidden;
 }
@@ -33,6 +32,7 @@ input[type=text], input[type=password]{
 }
 label{
     margin-bottom: 10px;
+    white-space: nowrap;
 }
 label.lbl{
     color: #2A2A2A;
@@ -50,17 +50,19 @@ label.lbl{
 .password {
     position: relative;
     margin-bottom: 0.7em;
+    font-size: 14px;
 }
 input, label{
     display: block;
 }
 label.abcd {
-    margin-left: 1.9em;
+    margin-left: 1.6em;
     display: block;
     position: relative;
     margin-top: -1.2em;
     line-height: 1.2em;
     color: #ADADAD;
+    font-size: 14px;
 }
 h1{
     text-align: left;
@@ -93,12 +95,26 @@ span{
 .flex{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin: -110px auto;
     min-height: 100vh;
     margin-top: -7px;
     width: 100%;
+}
+.img1{
+   position: absolute;
+   left: 50.56%;
+   right: 8.33%;
+   top: 10.02%;
+   bottom: 27.73%;
+}
+.box{
+   margin-bottom: 140px;
+   margin-left: 15px;
+}
+.logo{
+    padding: 30px;
+    margin-left: -15px;
 }
 input::placeholder{
     color: #ADADAD;
@@ -110,19 +126,6 @@ input:focus, input:hover{
 }
 label:hover{
     cursor: pointer;
-}
-.logo{
-    padding: 30px;
-    margin-left: -15px;
-}
-.img1{
-    margin-left: 50%;
-    height: 500px;
-    margin-bottom: 200px;
-}
-.box{
-    margin-right: -30%;
-    margin-bottom: 70px;
 }
 .btn-primary{
     padding: 6px 139.5px;
@@ -152,6 +155,9 @@ label:hover{
     align-items: center;
     justify-content: center;
 }
+.sized{
+    white-space: nowrap;
+}
 .arrow{
     width: 90%;
     margin: auto;
@@ -164,7 +170,33 @@ label:hover{
     margin-top: -1.5em;
     line-height: 1.2em;
     font-size: 17px;
+    white-space: nowrap;
 }
 .arr{
     font-size: 30px;
+}
+
+@media screen and (max-width: 600px){
+    body{
+        width: 428px;
+        height: 926px;
+    }
+    .container{
+        padding: 30px;
+    }
+    .img1{
+        display: none;
+    }
+    .flex{
+        display: inline;
+        overflow: hidden;
+    }
+    .box{
+        margin-top: 100px;
+    }
+    .center-box{
+        margin-top: 100px;
+        margin-left: 19px;
+    }
+
 }

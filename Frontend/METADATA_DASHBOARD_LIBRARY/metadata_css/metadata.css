@@ -280,30 +280,32 @@ color: #196DDC;
     font-size: 16px;
 }
 #item_headings{
-   
+    
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background: #FEE5D2;
     padding: 24px;
 }
 #item_headings>div{
-    width: 100%;
+    width: 20%;
 }
 #items{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding-right: 24px;
     padding-left: 24px;
     border-bottom: 1px solid #B2CEF3;
     background: #FFFFFF;
     text-align: left;
+    align-items: center;
     color: #0D376E;
 }
 
 #checkbox>input{
     width: 24px;
     height: 24px;
-    display: none;
     
 }
 #items:last-child{
@@ -331,26 +333,8 @@ color: #196DDC;
 #items>#filesize{
     text-align: center;
 }
-#web_hidden_header{
-    display: none;
-}
-#table_setting{
-    display: none;
-}
-
-/* Profile page design*/
-
-#profile{
-    width: 100%;
-   text-align: center;
-}
-#heading{
-    color: #196DDC;
-}
 
 
-
-/* moile view*/
 @media screen and (max-width: 600px) {
     body{
         width: 100%;
@@ -375,63 +359,7 @@ color: #196DDC;
         margin-right: 30px;
         display: block;
     }
-    #second>div{
-        font-size: 24px;
-    }
-    #web_hidden_header{
-        display: block;
-    }
-    #export>#download{
-        display: none;
-    }
-    #export>#share{
-        display: none;
-    }
-    #export>#delete{
-        display: none;
-    }
     
-    #export>#table_setting{
-        display: block;
-    }
-    #filesize{
-        grid-area: filesize;
-        font-size: 12px;
-    }
-    #dateuploaded{
-      grid-area: upload;
-      font-size: 12px;
-    }
-    #checkbox{
-        display: none;
-    }
-    #filename{
-        grid-area: filename;
-        
-    }
+    
 
-    #items{
-        display: grid;
-        grid-template-areas:
-        'filename filename export '
-        'upload filesize   export';
-        grid-gap: 1px;
-        justify-items: start;
-    }
-    #items>div{
-        width: auto;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin: 5px;
-    }
-    #export{
-    grid-area: export;
-    }
-    #item_headings>#dateuploaded{
-        display: none;
-      }
-      #item_headings>#filesize{
-        display: none;
-      }
   }
-  

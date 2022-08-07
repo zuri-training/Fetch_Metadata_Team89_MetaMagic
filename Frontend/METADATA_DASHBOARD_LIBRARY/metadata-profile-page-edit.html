@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="metadata_css/edit_profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+<script src="metadata.js"></script>
+    <title>Metadata profile Page</title>
+</head>
+<body>
+    <div id="dashboard_details">
+        <div id="top_sidebar">
+            <div id="logo">
+                <img id = "white_logo" src="media/White Logo.png" alt="">
+                <img id = "close_icon"  onclick="yokes()" src="media/delete-circled-outline.png" alt="">
+            </div>
+            <div id="user_profile">
+                 <div id="profile_image"><img  id="profile-picture"src="media/download.jpeg" alt=""></div>
+                 <div id="userame_jobtype">
+                        <div id="username">
+                            <p>Demola Daniels</p>
+                        </div>
+                        <div id="jobtype">Metadata Analyst</div>
+                    </div>
+            </div>
+            <div id="second_part">
+                <div id="details">
+                <div id="icon"><img src="media/user.png" alt=""></div>
+                <div id="text">Profile</div>
+
+                </div>
+                <div id="details">
+                <div id="icon"><img src="media/report-columns.png" alt=""></div>
+                <div id="text">Dashboard</div>
+
+                </div>
+                <div id="details">
+                <div id="icon"><img src="media/upload.png" alt=""></div>
+                <div id="text">Upload & Extract</div>
+
+                </div>
+                <div id="details" class="active">
+                <div id="icon"><img src="media/bookmark-empty-white.png" alt=""></div>
+                <div id="text" class="active"><p>Metadata Library</p></div>
+
+                </div>
+            </div>
+
+        </div>
+        <div id="bottom_sidebar">
+            <div id="support_section">
+                <div id="support_image">
+                    <img src="media/Contact-support.png" alt="">
+                </div>
+                <div id="support_button">
+                    <input type="button" value="Contact Support">
+                </div>
+            </div>
+            <div id="logout">
+                <div id="icon"><img src="media/log-out.png" alt=""></div>
+               <div id="log">Logout</div>
+            </div>
+        </div>
+
+    </div>
+
+        <div id="profile">
+            <!--Header and profile section-->
+            <div id="profile-display">
+                <div id="second">
+                    <div id= "vector" ><img src="media/Vector.png" onclick="yikes()" alt=""></div>
+                    <div id ="web_hidden_header"><p>Edit Your Profile</p></div>
+                </div>
+                <div id="heading"><h4>Edit Your Profile</h4></div>
+                <div id="profile_image"><img id="profile-picture" src="media/download.jpeg" alt=""><img id="profile-icon" src="media/Edit-icon.svg" alt=""></div>
+            </div>
+            <!--Input section-->
+            <div id="edit-field">
+                <div class="side-one">
+                    <div id="input-feild">
+                        <label for="name">Full Name</label><br>
+                        <input type="text" placeholder="What is your name">
+                    </div>
+                    <div id="input-feild">
+                        <label for="name">Email Address</label><br>
+                        <input type="text" placeholder="What is your email address">
+                    </div>
+                    <div id="input-feild">
+                        <label for="name">Coutry</label><br>
+                        <input type="text" placeholder="Where are you from">
+                    </div>
+                </div>
+                <div class="side-two">
+                    <div id="input-feild">
+                        <label for="name">Occupation</label><br>
+                        <input type="text" placeholder="What do you do">
+                    </div>
+                    <div id="input-feild">
+                        <label for="name">Gender</label><br>
+                        <input type="text" placeholder="What is your gender">
+                    </div>
+                    <div id="input-feild">
+                        <label for="name">Phone Number</label><br>
+                        <input type="text" placeholder="+234-0000-0200-07">
+                    </div>
+                </div>
+                
+            </div>
+            <div id="edit-button">
+                <input type="button" value="Save Profile">
+            </div>
+                 </div>
+           
+           
+    </div>
+</body>
+</html>

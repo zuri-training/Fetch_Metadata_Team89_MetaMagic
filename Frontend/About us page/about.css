@@ -2,9 +2,13 @@
 * {
     box-sizing: border-box;
 }
+
+/* this border link should be removed */
 * {
   border: 1px solid red !important;
-}
+} 
+
+
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   background: #F6F6F6;
@@ -245,10 +249,6 @@ footer ul a:hover{
     object-fit: cover;
   }
 
-  width: 60%;
-  
-  padding-left: 50px;
-  padding-right: 10%;
   .about_header{
     width: 100%;
     height: 100vh;

@@ -162,6 +162,10 @@ main {
   padding-left: 50px;
   padding-right: 10%;
 } 
+picture{
+  display: contents;
+  
+}
 .container{
   display: flexbox;
   justify-content: center;
@@ -174,6 +178,7 @@ main {
 }
 .team-name{
   font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 28px;
   text-align: center;
   color: #196DDC;
 }
@@ -181,6 +186,9 @@ main {
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 20px;
+}
+picture{
+
 }
 /* body ends here */
 

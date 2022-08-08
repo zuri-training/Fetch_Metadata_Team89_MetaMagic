@@ -48,6 +48,7 @@ body{
 }
 #profile_image{
     width: 112px;
+    position: relative;
     border-radius: 112px;
     border-top: 4px solid #FC7C1C;
     border-left: 4px solid transparent;
@@ -57,9 +58,21 @@ body{
     margin: 4px;
     align-self: center;
 }
-#profile_image>img{
+#profile-picture{
     width: 100%;
     border-radius: 100%;
+    align-self: center;
+}
+#profile-icon{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    bottom: 0px;
+    right: 25px;
+    background-color: #196DDC;
+    border-radius: 4px;
+    cursor: pointer;
+
 }
 #username{
     color: #196DDC;
@@ -280,30 +293,32 @@ color: #196DDC;
     font-size: 16px;
 }
 #item_headings{
-   
+    
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background: #FEE5D2;
     padding: 24px;
 }
 #item_headings>div{
-    width: 100%;
+    width: 20%;
 }
 #items{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding-right: 24px;
     padding-left: 24px;
     border-bottom: 1px solid #B2CEF3;
     background: #FFFFFF;
     text-align: left;
+    align-items: center;
     color: #0D376E;
 }
 
 #checkbox>input{
     width: 24px;
     height: 24px;
-    display: none;
     
 }
 #items:last-child{
@@ -334,9 +349,6 @@ color: #196DDC;
 #web_hidden_header{
     display: none;
 }
-#table_setting{
-    display: none;
-}
 
 /* Profile page design*/
 
@@ -344,13 +356,65 @@ color: #196DDC;
     width: 100%;
    text-align: center;
 }
+#profile-display{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 111px;
+}
+#profile-display>#profile_image{
+    width: 138px;
+    height: 138px;
+    margin-top: 75px;
+    margin-bottom: 111px;
+}
 #heading{
     color: #196DDC;
+    font-size: 40px;
+    font-weight: 700;
+}
+#edit-field{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+}
+.side-one{
+    padding: 30px;
+    text-align: left;
+}
+.side-two{
+    text-align: left;
+    padding: 30px;
+}
+
+label{
+    color:#2A2A2A;
+    font-size: 12px;
+    font-weight: 400px;
+    
+}
+#input-feild> input{
+    width: 320px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 32px;
+    border:2px solid #3F85E2  ;
+    border-radius: 4px;
+}
+#edit-button input{
+    align-self: center;
+    padding: 24px 32px;
+    margin-top: 24px;
+    width: 188px;
+    border: 0px;
+    color: #FFFFFF;
+    background: #196DDC;
+    border-radius: 4px;
 }
 
 
 
-/* moile view*/
 @media screen and (max-width: 600px) {
     body{
         width: 100%;
@@ -376,62 +440,9 @@ color: #196DDC;
         display: block;
     }
     #second>div{
-        font-size: 24px;
+        visibility: hidden;
     }
     #web_hidden_header{
         display: block;
     }
-    #export>#download{
-        display: none;
-    }
-    #export>#share{
-        display: none;
-    }
-    #export>#delete{
-        display: none;
-    }
-    
-    #export>#table_setting{
-        display: block;
-    }
-    #filesize{
-        grid-area: filesize;
-        font-size: 12px;
-    }
-    #dateuploaded{
-      grid-area: upload;
-      font-size: 12px;
-    }
-    #checkbox{
-        display: none;
-    }
-    #filename{
-        grid-area: filename;
-        
-    }
-
-    #items{
-        display: grid;
-        grid-template-areas:
-        'filename filename export '
-        'upload filesize   export';
-        grid-gap: 1px;
-        justify-items: start;
-    }
-    #items>div{
-        width: auto;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin: 5px;
-    }
-    #export{
-    grid-area: export;
-    }
-    #item_headings>#dateuploaded{
-        display: none;
-      }
-      #item_headings>#filesize{
-        display: none;
-      }
   }
-  

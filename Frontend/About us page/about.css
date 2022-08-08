@@ -4,9 +4,7 @@
 }
 
 /* this border link should be removed */
-* {
-  border: 1px solid red !important;
-} 
+
 
 
 body {

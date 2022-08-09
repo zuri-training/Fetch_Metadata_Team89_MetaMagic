@@ -4,7 +4,13 @@
 }
 
 /* this border link should be removed */
+<<<<<<< HEAD
+* {
+  border: 1px solid red !important;
+} 
+=======
 
+>>>>>>> 44cd9287a61f85f8bec434e3091517c6816da0a4
 
 
 body {

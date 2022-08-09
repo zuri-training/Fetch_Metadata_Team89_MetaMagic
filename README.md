@@ -93,7 +93,8 @@ This application runs on all devices as it has been built as a responsive applic
 - Contact Us Page
 - Dashboard
 - File upload page
-- METADATA_DASHBOARD library
+- Metadata library
+- Profile page
 
 
 ## LINKS

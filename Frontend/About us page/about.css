@@ -2,6 +2,11 @@
 * {
     box-sizing: border-box;
 }
+
+/* this border link should be removed */
+
+
+
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   background: #F6F6F6;
@@ -115,13 +120,83 @@ nav ul .blue{
   background: #082449;
 }
 /* nav bar ends here */
-/* you can code the rest of the body here */
+
+
+
+/*  body starts here */
+main {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #F6F6F6;
+  margin: 0;
+}
+.content {
+  display: flex;
+}
+.about_header{
+  /* display: flexbox; */
+  width: 50%;
+}
+.about_us{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 40px;
+  color: #196DDC;
+  align-items: 50%;
+  padding-left: 30%;
+  margin-top: 5%;
+  margin-bottom: 40px;
+}
+.paragraph{
+  font-family: 'IBM Plex Sans' sans-serif;
+  color: #2A2A2A;
+  text-align: left;
+  padding-left: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+}
+.img{
+  width: 60%;
+  object-fit: cover;
+  padding-left: 50px;
+  padding-right: 10%;
+} 
+picture{
+  display: contents;
+  
+}
+.container{
+  display: flexbox;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.team_profile{
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #196DDC;
+}
+.team-name{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 28px;
+  text-align: center;
+  color: #196DDC;
+}
+.img-2{
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+picture{
+
+}
+/* body ends here */
+
+
+
 /* footer starts here */
 footer{
   position: absolute;
   width: 100%;
   height: 304px;
-  top: 4090px;
   background: #114993;
   display: flex;
   justify-content: space-between;
@@ -162,4 +237,51 @@ footer ul a:hover{
 .disclaim{
   margin-left: 25px;
 }
-/* mobile view should come in here */
+/* footer ends here */
+
+
+
+/* mobile view starts in here */
+@media only screen and (max-width: 600px) {
+  body{
+    width: 428px;
+    height: 926px;
+  }
+  .content {
+    display: block;
+  }
+  .img {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .about_header{
+    width: 100%;
+    height: 100vh;
+    padding: 10%;
+  }
+  .about_us{
+    font-size: 28px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .paragraph{
+    padding: 10 auto;
+    text-align: left;
+  }
+
+
+  footer{
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+  .features{
+    margin-top: 10px;
+  }
+  .quicklinks{
+    margin-top: -8px;
+    margin-right: 200px;
+  } 
+}
+/* mobile view ends in here */

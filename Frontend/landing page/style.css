@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #F6F6F6;
+  margin: 0;
+  width: 1440px;
+  max-width: 100%;
+  height: auto;
+}
+.navbr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 6%;
+}
+.logo{
+  cursor: pointer;
+}
+ul li, p, footer ul a{
+  transition: all 0.1s ease 0s;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.nav-links{
+  list-style: none;
+}
+.nav-links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+li a{
+  transition: all 0.1s ease 0s;
+  text-decoration: none;
+  color: #2A2A2A;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.nav-links li a:hover{
+  color: #FC9242;
+}
+nav ul .blue{
+  color: #196DDC;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.checkbtn, input[type=checkbox]{
+  display: none;
+}
+.btn-secondary{
+  width: 122px;
+  height: 48px;
+  left: 1079px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  top: 32px;
+  background: #F6F6F6;
+  border: 3px solid #196DDC;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #196DDC;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.btn-secondary:hover{
+  border: 3px solid #114993;
+  box-shadow: 0px 1px 8px 1px #114993;
+}
+.btn-secondary:focus{
+  border: 3px solid #082449;
+  color: #082449;
+}
+.btn-tertiary{
+  width: 122px;
+  height: 48px;
+  left: 119px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #196DDC;
+  border: 2px solid #196DDC;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #F6F6F6;
+  cursor: pointer;
+}
+.btn-tertiary:hover, .btn-primary:hover, .btn-quart:hover{
+  background: #114993;
+  color: #FFFFFF;
+}
+.btn-tertiary:focus, .btn-primary:focus, .btn-quart:focus{
+  background: #082449;
+}
+.btn-quart{
+  width: 151px;
+  height: 48px;
+  left: 120px;
+  margin-top: 40px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #196DDC;
+  border: 2px solid #196DDC;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #F6F6F6;
+  cursor: pointer;
+}
+.box-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -110px auto;
+  min-height: 100vh;
+  margin-top: -7px;
+  width: 100%;
+  padding: 30px;
+}
+.text-1{
+  margin-left: -2%;
+  margin-bottom: 200px;
+}
+.img11{
+  margin-left: 5%;
+  margin-bottom: 250px;
+}
+.para{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #686868;
+}
+hr{
+  width: 50%;
+  margin-left: 5px;
+  margin-top: -55px;
+}  
+.ptag{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 96px;
+  color: #454545;
+  margin-top: -150px;
+}
+span{
+  color: #196DDC;
+}
+.box{
+  position: absolute;
+  width: 100%;
+  height: 124px;
+  left: 0px;
+  top: 800px;
+  background: #D1E2F8;
+  border-radius: 4px;
+  text-align: center;
+}
+.para-2{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #155BB7;
+}
+.para-3, .para-4{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: #454545;
+}
+.box-2, .box-4, .box-5{
+  text-align: center;
+}
+.box-2{
+  margin-top: -100px;
+}
+.box-3{
+  position: absolute;
+  background: #FFFFFF;
+  width: 1200px;
+  height: 672px;
+  left: 78px;
+  margin-top: -65px;
+  box-shadow: 0px 3px 14px 3px rgba(0, 0, 0, 0.12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 5%;
+}
+.box-4{
+  margin-top: 700px;
+}
+.img14{
+  margin-right: 30px;
+}
+.box-6{
+  position: absolute;
+  width: 1200px;
+  height: 288px;
+  left: 80px;
+  top: 3700px;
+  background: #D1E2F8;
+  box-shadow: 0px 3px 14px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.para-5{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #196DDC;
+  margin-top: 110px;
+}
+.btn-primary{
+  width: 179px;
+  height: 48px;
+  background: #196DDC;
+  border: 2px solid #196DDC;
+  border-radius: 4px;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #F6F6F6;
+  margin-top: 113px;
+  cursor: pointer;
+}
+footer{
+  position: absolute;
+  width: 100%;
+  height: 304px;
+  top: 4090px;
+  background: #114993;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
+}
+footer ul{
+  list-style: none;
+}
+footer ul a:hover{
+  color: #FC9242;
+}
+.orange{
+  color: #FC9242;
+  font-size: 27px;
+}
+.oran{
+  color: #FC9242;
+}
+.copyright{
+  margin-top: 140px;
+}
+.quicklinks{
+  margin-top: -8px;
+  margin-right: 200px;
+}
+.features{
+  margin-top: 40px;
+}
+.icons ul li{
+  display: inline-block;
+  padding: 0px 7px;
+}
+.stretch{
+  margin-top: 130px;
+  margin-right: 150px;
+}
+.disclaim{
+  margin-left: 25px;
+}
+.bounce{
+  white-space: nowrap;
+  width: 50px;
+  margin-left: -130px;
+  margin-top: -5px;
+}
+.bounce > p{
+  color: #686868;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: -10px;
+}
+.bounce > h3{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  color: #454545;
+}
+.iconflex{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    width: 428px;
+  }
+}

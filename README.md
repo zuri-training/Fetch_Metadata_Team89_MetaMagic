@@ -84,8 +84,28 @@ Unregistered users have limited access to the platform.
 ### How it runs.
 This application runs on all devices as it has been built as a responsive application usable on all interfaces.
 
-Sample of code.
+#### List of pages included in the application
+- Landing page
+- Sign up page
+- Log in page
+- Forgot password page
+- About us page
+- Contact Us Page
+- Dashboard
+- File upload page
+- METADATA_DASHBOARD
 
+
+## LINKS
+
+### Project Documentation
+(https://docs.google.com/document/d/17bwgDRxA6mNDWWl-HUSTkEuZG8i39ip3tEpNJh_AHy8/edit).
+
+###  schema Diagram
+(https://drive.google.com/file/d/1OTTV7MmU-6zZtQDrFdTfvmSNHH1luR42/view?usp=sharing).
+
+### Figma File
+(https://www.figma.com/file/zVCj2MJ5YTNWGJfwvUvS3P/Team_89-MetaMagic?node-id=2%3A3)
 Images of applications running on devices.
 (We can add links here as well.)
 

@@ -106,8 +106,8 @@ This application runs on all devices as it has been built as a responsive applic
 
 ### Figma File
 (https://www.figma.com/file/zVCj2MJ5YTNWGJfwvUvS3P/Team_89-MetaMagic?node-id=2%3A3)
-Images of applications running on devices.
-(We can add links here as well.)
+
+
 
 ### License
 =======

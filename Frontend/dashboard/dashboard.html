@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/dashboard.css">
+    <link rel="stylesheet" href="stylesheets/dashboard.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="stylesheets/dashboard_mobile.css" media="screen and (max-width: 600px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
@@ -71,6 +72,9 @@
         <!-- Navigation Bar -->
         <div class="main-dashboard">
             <nav class="navbar">
+                <div class="menubar">
+                    <img src="assets/icons/blue-menu.svg" alt="" srcset="">
+                </div>
                 <div class="searchbar">
                     <span id="searchicon">
                         <img src="assets/icons/search-normal.svg" alt="Search">
@@ -96,6 +100,19 @@
                 </div>
             </nav>
             <!-- End Navigation Bar -->
+
+            <!-- Navigation Popup -->
+            <div class="notif-popup">
+                <h3 class="notif-popup-heading">Disclaimer</h3>
+                <p class="notif-popup-text">
+                    Hey Demola! Thank you for trusting our platform. 
+                    We would like you to know that this platform was created for educational purposes. 
+                    As much as we do not control what is done on the platform, 
+                    we advise that you use it safely for yourself and others.
+                </p>
+                <button class="primary-btn ok-btn " id="notif-popup-btn">OK</button>
+            </div>
+            <!-- End Navigation Popup -->
             
             <!-- Greeting and CTA buttons -->
             <div class="welcome-wrapper">
@@ -125,7 +142,6 @@
                         <div class="stat-figures">
                             <p class="stat-num">200</p>
                             <p class="stat-percent">100%</p>
-                            
                         </div>
                         <div class="stat-files">
                             <p class="stat-fname">120 <span class="stat-ftype">JPG</span></p>
@@ -175,7 +191,7 @@
             <!-- Recently Saved Section -->
             <div class="recents-section">
                 <div class="recents-header">
-                    <h3 class="title recents-title">Recently Saved</h3>
+                    <h3 class="title recents-heading">Recently Saved</h3>
                     <a href="#" class="recents-more">See more</a>
                 </div>
                 <!-- Recently saved items -->
@@ -195,8 +211,8 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
+                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
                         </div>
                     </div>
                     <div class="recents-item">
@@ -214,8 +230,8 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
+                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
                         </div>
                     </div>
                     <div class="recents-item">
@@ -233,8 +249,8 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
+                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
                         </div>
                     </div>
                     <div class="recents-item">
@@ -252,8 +268,8 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
+                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
                         </div>
                     </div>
                     <div class="recents-item">
@@ -271,8 +287,8 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
+                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn" > <!-- Download icon -->
+                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
                         </div>
                     </div>
                     <div class="recents-item">
@@ -290,8 +306,8 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
+                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
                         </div>
                     </div>
                     <div class="recents-item">
@@ -309,8 +325,8 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
+                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
                         </div>
                     </div>
                     <div class="recents-item">
@@ -328,14 +344,62 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
+                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
                         </div>
                     </div>
                 </div>
                 <!-- End recently saved items -->
             </div>
             <!-- End Recently Saved Section -->
+
+            <!-- Download Button Popup -->
+            <!-- End Download Button Popup -->
+            
+            <!-- Share Button Popup -->
+            <div class="share-popup">
+                <div class="share-popup-heading">
+                    <h3>Share <span>Metadata</span> File</h3>
+                    <img src="assets/icons/delete-circled-outline.svg" alt="Close">
+                </div>
+                <div class="share-popup-add">
+                    <p>Add people and groups</p>
+                </div>
+                <div class="share-popup-owner">
+                    <p>People with access</p>
+                    <div class="spo-details">
+                        <div class="spo-userinfo"> <!--  -->
+                            <span><img src="assets/images/download.jpeg" alt="" class="spo-img"></span>
+                            <div class="spo-uid">
+                                <p class="spo-blue-text" id="spo-name">Demola Daniels</p>
+                                <small class="spo-small-text" id="spo-mail">demoladaniels@gmail.com</small>  
+                            </div>
+                        </div>
+                        <p class="spo-blue-text">Owner</p>
+                    </div>
+                </div>
+                <div class="share-popup-access">
+                    <p>General Access</p>
+                    <div class="spa-details">
+                        <div class="spa-userinfo">
+                            <img src="assets/icons/www.svg" alt="">
+                            <div>
+                                <p class="text-dropdown spo-blue-text">Anyone with the link <span class="arrow-down"><img src="assets/icons/darkblue-nav-arrow-down.svg" alt=""> </span> </p>
+                                <small class="spo-small-text">Anyone with the link can view</small>
+                            </div>
+                        </div>
+                        <p class="text-dropdown spo-blue-text">Viewer <span class="arrow-down"><img src="assets/icons/darkblue-nav-arrow-down.svg" alt=""></span></p>
+                    </div>
+                </div>
+                <div class="share-popup-btns">
+                    <button type="submit" class="primary-btn" id="copy-link-btn">
+                        <img src="assets/icons/attachment.svg" alt="" class="copy-link">
+                        Copy Link
+                    </button>
+                    <button type="submit" class="secondary-btn" id="done-btn">Done</button>
+                </div>
+            </div>
+            <!-- End Share Button Popup -->
 
             <!-- File Types Section -->
             <div class="files-section">

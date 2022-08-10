@@ -1,5 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="metadata_css/metadata.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="metadata.js"></script>
+    <title>Metadata library</title>
+  </head>
+  <body>
+    <div id="dashboard_details">
+      <div id="top_sidebar">
+        <div id="logo">
+          <img id="white_logo" src="media/White Logo.png" alt="" />
+          <img
+            id="close_icon"
+            onclick="yokes()"
+            src="media/delete-circled-outline.png"
+            alt=""
+          />
+        </div>
+        <div id="user_profile">
+          <div id="profile_image"><img src="media/download.jpeg" alt="" /></div>
+          <div id="userame_jobtype">
+            <div id="username">
+              <p>Demola Daniels</p>
+            </div>
+            <div id="jobtype">Metadata Analyst</div>
+          </div>
+        </div>
+        <div id="second_part">
+          <div id="details">
+            <div id="icon"><img src="media/user.png" alt="" /></div>
+            <div id="text">Profile</div>
+          </div>
+          <div id="details">
+            <div id="icon"><img src="media/report-columns.png" alt="" /></div>
+            <div id="text">Dashboard</div>
+          </div>
+          <div id="details">
+            <div id="icon"><img src="media/upload.png" alt="" /></div>
+            <div id="text">Upload & Extract</div>
+          </div>
+          <div id="details" class="active">
+            <div id="icon">
+              <img src="media/bookmark-empty-white.png" alt="" />
+            </div>
+            <div id="text" class="active"><p>Metadata Library</p></div>
+          </div>
+        </div>
+      </div>
+      <div id="bottom_sidebar">
+        <div id="support_section">
+          <div id="support_image">
+            <img src="media/Contact-support.png" alt="" />
+          </div>
+          <div id="support_button">
+            <input type="button" value="Contact Support" />
+          </div>
+        </div>
+        <div id="logout">
+          <div id="icon"><img src="media/log-out.png" alt="" /></div>
+          <div id="log">Logout</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main_dashboard">
+      <div id="first">
+        <div id="search_bar">
+          <div id="search_icon">
+            <img src="media/search-normal.png" alt="" />
+          </div>
+          <div id="search_input"><input type="text" /></div>
+        </div>
+        <div id="greeting">
+          <div id="image_display"><img src="media/download.jpeg" alt="" /></div>
+          <div id="welcome_message">Hello, Demola</div>
+        </div>
+        <div id="notification">
+          <img src="media/notification-bing.svg" alt="" />
+          <img src="media/user.svg" alt="" />
+        </div>
+      </div>
+      <div id="second">
+        <div id="vector">
+          <img src="media/Vector.png" onclick="yikes()" alt="" />
+        </div>
+        <div><p>Metadata Library</p></div>
+      </div>
+      <div id="third">
+        <div id="fourth">
+          <div id="table_name">
+            <div id="tablename"><p>File History</p></div>
+            <div id="table_setting">
+              <img src="media/more-vert.svg" alt="" />
+            </div>
+          </div>
+          <div id="tablesummary">Previously uploaded files</div>
+        </div>
+        <div id="item_headings">
+          <div id="checkbox" style="visibility: hidden">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>File name</p>
+          </div>
+          <div id="filesize">
+            <p>File size</p>
+          </div>
+          <div id="dateuploaded">
+            <p>Date uploaded</p>
+          </div>
+          <div id="export">
+            <div id="download"></div>
+            <div id="share"></div>
+            <div id="delete"></div>
+          </div>
+        </div>
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>The Metadata Handbook.pdf</p>
+          </div>
+          <div id="filesize">
+            <p>15 MB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>June 23, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>I4G & Zuri Corporate Profile 2019</p>
+          </div>
+          <div id="filesize">
+            <p>25 MB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>June 20, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>Beach Hangout.png</p>
+          </div>
+          <div id="filesize">
+            <p>4 MB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>DJanuary 06, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>Team 89 Weekly Attendance List.csv</p>
+          </div>
+          <div id="filesize">
+            <p>456 KB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>DJanuary 06, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>FMetamagic Dashboard Display Mockup.jpeg</p>
+          </div>
+          <div id="filesize">
+            <p>5MB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>January 14, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>Zuri Project Phase Terms & Conditions.docx</p>
+          </div>
+          <div id="filesize">
+            <p>4 MB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>June 16, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>Research Guidelines.csv</p>
+          </div>
+          <div id="filesize">
+            <p>12 MB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>May 06, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>Steal Like An Artist.pdf</p>
+          </div>
+          <div id="filesize">
+            <p>96 KB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>February 17, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="items">
+          <div id="checkbox">
+            <input type="checkbox" />
+          </div>
+          <div id="filename">
+            <p>Metamagic Landing Page Backend.json</p>
+          </div>
+          <div id="filesize">
+            <p>32 MB</p>
+          </div>
+          <div id="dateuploaded">
+            <p>January 25, 2022</p>
+          </div>
+          <div id="export">
+            <div id="download">
+              <img src="media/download-square-outline.svg" alt="" />
+            </div>
+            <div id="share">
+              <img src="media/share-android.svg" alt="" />
+            </div>
+            <div id="delete">
+              <img src="media/trash.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="fifth">
+        <div id="num">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+=======
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -354,3 +720,4 @@
     </div>
 </body>
 </html>
+>>>>>>> 44cd9287a61f85f8bec434e3091517c6816da0a4

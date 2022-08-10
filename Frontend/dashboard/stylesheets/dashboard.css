@@ -172,7 +172,6 @@ main {
   display: flex;
   flex-direction: row;
 }
-
 .main-dashboard {
   padding: 32px;
   width: 75vw;
@@ -520,3 +519,33 @@ main {
 *               MOBILE VIEW CSS STYLES                *
 *                                                     *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* @media only screen and (max-width: 600px) {
+  #dashboard_details {
+    display: none;
+  }
+} */
+@media only screen and (max-width: 450px) {
+  #dashboard_details {
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-dashboard {
+    width: 100vw;
+    padding: 16px;
+  }
+  .navbar {
+    height: 48px;
+    /* border: 1px solid black; */
+  }
+  .searchbar {
+    height: 48px;
+    width: 14rem;
+  }
+  
+  .profile-photo, .profile-intro {
+    display: none;
+  }
+}

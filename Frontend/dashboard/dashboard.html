@@ -72,9 +72,9 @@
         <!-- Navigation Bar -->
         <div class="main-dashboard">
             <nav class="navbar">
-                <div class="menubar">
+                <a class="menubar" href="javascript:toggleSidePane()">
                     <img src="assets/icons/blue-menu.svg" alt="" srcset="">
-                </div>
+                </a>
                 <div class="searchbar">
                     <span id="searchicon">
                         <img src="assets/icons/search-normal.svg" alt="Search">
@@ -90,19 +90,19 @@
                         </p>
                     </div>
                     <div class="notification">
-                        <span class="bing">
-                        <img src="assets/icons/white-notification-bing.svg" alt="Notifications">
-                        </span>
-                        <span class="user">
-                        <img src="assets/icons/white-user.svg" alt="User">
-                        </span>
+                        <a id="notif-bing" href="javascript:showNotif()">
+                            <img src="assets/icons/white-notification-bing.svg" alt="Notifications">
+                        </a>
+                        <a class="user" href="#">
+                            <img src="assets/icons/white-user.svg" alt="User">
+                        </a>
                     </div>
                 </div>
             </nav>
             <!-- End Navigation Bar -->
 
             <!-- Navigation Popup -->
-            <div class="notif-popup">
+            <div class="notif-popup" id="notif-popup">
                 <h3 class="notif-popup-heading">Disclaimer</h3>
                 <p class="notif-popup-text">
                     Hey Demola! Thank you for trusting our platform. 
@@ -211,8 +211,24 @@
                             </span>
                         </div>
                         <div class="recents-actionbtns">
-                            <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
-                            <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
+                            <div>
+                                <!-- id="download-dropdown" class="recents-actionbtn" -->
+                                <a href="javascript:exportOptions()"  id="download-dropbtn" class="recents-actionbtn">
+                                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionimg download-btn"> <!-- Download icon -->
+                                </a>
+                                <div id="download-dropcontent" class="download-dropcontent">
+                                    <a>JPG</a>
+                                    <hr>
+                                    <a>PNG</a>
+                                    <hr>
+                                    <a>PDF</a>
+                                    <hr>
+                                    <a>TXT</a>
+                                </div>
+                            </div>
+                            <a href="javascript:share()" class="recents-actionbtn" id="share-dropbtn">
+                                <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionimg share-btn"> <!-- Share icon -->
+                            </a>
                         </div>
                     </div>
                     <div class="recents-item">
@@ -357,7 +373,7 @@
             <!-- End Download Button Popup -->
             
             <!-- Share Button Popup -->
-            <div class="share-popup">
+            <div class="share-popup" id="share-popup">
                 <div class="share-popup-heading">
                     <h3>Share <span>Metadata</span> File</h3>
                     <img src="assets/icons/delete-circled-outline.svg" alt="Close">
@@ -466,6 +482,53 @@
             </div>
             <!-- End File Types Section -->
         </div>
+
+        <script>
+            function toggleSidePane(){
+                const sidepane = document.getElementById("dashboard_details");
+                sidepane.style.display = "block";
+                sidepane.style.zIndex = 1;
+
+                document.onclick = function(e){
+                    if(e.target.id !== "dashboard_details"){
+                        sidepane.style.display = "none";
+                    }
+                }
+            }
+            function showNotif(){
+                // show disclaimer modal
+                const disclaimer = document.getElementById("notif-popup");
+                disclaimer.style.display = "flex";
+
+                document.onclick = function(e){
+                    if(e.target.id !== "notif-popup" || e.target.id == "notif-popup"){
+                        disclaimer.style.display = "none";
+                    }
+                }
+            }
+            function exportOptions(){
+                const exportBtn = document.getElementById("download-dropbtn");
+                const exportOptions = document.getElementById("download-dropcontent");
+                exportOptions.style.display = "flex";
+
+                document.onclick = function(e){
+                    if(e.target.id !== "download-dropbtn" || e.target.id !== "download-dropcontent"){
+                        exportOptions.style.display = "none";
+                    }
+                }
+            }
+            function share(){
+                const shareBtn = document.getElementById("share-dropbtn");
+                const sharePopup = document.getElementById("share-popup");
+                sharePopup.style.display = "flex";
+
+                document.onclick = function(e){
+                    if(e.target.id !== "share-btn"){
+                        sharePopup.style.display = "none";
+                    }
+                }
+            }
+        </script>
     </main>
     <!-- End of Main Sections -->
 </body>

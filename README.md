@@ -1,6 +1,6 @@
 # Fetch_Metadata_Team89
 # MetaMagic
-This is a final stage project given by Zuri to our group as a part of the final project phase of the Zuri training.
+This is a final stage project given by Zuri to our group,group 89, as a part of the final project phase of the Zuri training.
 
 ## Table of contents
 

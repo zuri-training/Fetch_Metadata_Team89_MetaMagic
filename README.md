@@ -95,17 +95,62 @@ This application runs on all devices as it has been built as a responsive applic
 - File upload page
 - METADATA_DASHBOARD library
 
+## GETTING STARTED AND USAGE REQUIREMENTS
+### ISSUES
+### TO REPORT AN ISSUE
+1. When you notice any issues with the code
+    - Search the existing issues to find out if a similar issue has been logged by another contributor
+    - If no such issues has been logged,Please create a new issue. Please ensure a detailed explaination is included so that  other developers will understand the issues and proffer solutions to it.
+    
+2. Ensure that appropriate labels are provided for easy referencing.
+
+### FIXING AN ISSUE
+
+1. Search for issues you might be interested in fixing.
+
+  - Note the tasks that requires fixing within the issue.
+  
+2.  For the security of the development area, Fork repo and work on the issue on your local machine.
+
+3.  After you are through with the fix, Create a pull request. Ensure there is a clear link  by using  an associated keyword.
+  
+
+## HOW TO CONTRIBUTE TO THE PROJECT
+This project is open source and you can contribute to it to make it better with 
+all the necessary explanations, so subsequent users and contributors will understand your contributions.
+
+##### To contribute to the project you need to do the following:
+
+-Fork the main branch of the repository.
+
+-Clone the forked repository to local machine.
+
+-Set this update this repo to ensure your repository is up to date.
+
+-Pull changes from our repo.
+
+-Pull changes from our repo to your remote repo.
+
+-Stage your changes.
+
+-Write descriptive commit message.
+
+-Push your changes to your remote repo.
+
+### PULL REQUESTS
+Create a pull request on our main branch
+Give detailed description on your pull request and link to approriate issue See Fixing an Issue above
+Wait for our reviewers to review and approve pull request for merging
 
 ## LINKS
 
-### Project Documentation
-(https://docs.google.com/document/d/17bwgDRxA6mNDWWl-HUSTkEuZG8i39ip3tEpNJh_AHy8/edit).
+[Project Documentation](https://docs.google.com/document/d/17bwgDRxA6mNDWWl-HUSTkEuZG8i39ip3tEpNJh_AHy8/edit).
 
-###  schema Diagram
-(https://drive.google.com/file/d/1OTTV7MmU-6zZtQDrFdTfvmSNHH1luR42/view?usp=sharing).
 
-### Figma File
-(https://www.figma.com/file/zVCj2MJ5YTNWGJfwvUvS3P/Team_89-MetaMagic?node-id=2%3A3)
+[Schema Diagram](https://drive.google.com/file/d/1OTTV7MmU-6zZtQDrFdTfvmSNHH1luR42/view?usp=sharing).
+
+
+[Figma File](https://www.figma.com/file/zVCj2MJ5YTNWGJfwvUvS3P/Team_89-MetaMagic?node-id=2%3A3)
 
 
 

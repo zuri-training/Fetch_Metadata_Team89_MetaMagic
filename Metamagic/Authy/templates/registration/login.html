@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}" type="text/css" />
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <nav>
+        <a href="#"><img class="logo" src="{% static 'img/images/logo frame.svg' %}" alt="logo" /></a>
+        </nav>
+        <div class="flex">
+            <div class="box">
+                <div>
+                    <h1>Login</h1>
+                    <span>Welcome back! Please enter your details</span>
+                    <br>
+                    <br>
+                    <form method="POST" action="." id="login-form">
+                        {% csrf_token %}
+                    <label class="lbl"><b>Username</b></label>
+                    {{form.username}}
+                    <br>
+                    <label class="lbl"><b>Password</b></label>
+                    {{form.password}}
+                    {% comment %} <input type="password" placeholder="Enter password" name="password" required> {% endcomment %}
+                </div>
+                <br>
+                <div class="rem">
+                    <div>
+                        <input id="cb" type="checkbox">
+                        <label for="cb" class="abcd">Remember me for 30 days</label>
+                    </div>
+                    <span class="password"><a href="{% url 'password_reset' %}">Forgot Password?</a></span>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <p>Don't have an account yet? <a href="./signup.html">Sign up</a></p>
+                </div>
+                </form>
+            </div>
+            <div class="img1">
+                <img src="{% static 'img/images/bro.svg' %}" alt="bro image" />
+            </div>
+        </div>
+        
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,546 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'stylesheets/dashboard.css' %}" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="{% static 'stylesheets/dashboard_mobile.css' %}" media="screen and (max-width: 600px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+    {% block content %}
+
+    <!-- Main Sections -->
+    <main>
+        <!-- Dashboard Side Pane -->
+        <div id="dashboard_details">
+            <div id="top_sidebar">
+                <div id="logo">
+                    <img src="{% static 'assets/images/White Logo.png' %}" alt="logo">
+                </div>
+                <div id="user_profile">
+                        <div id="profile_image"><img src="{% static 'assets/images/download.jpeg' %}" alt="logo"></div>
+                        <div id="userame_jobtype">
+                            <div id="username">
+                                <p>{{ user.username|default:'Guest' }}</p>
+                            </div>
+                            <div id="jobtype">Metadata Analyst</div>
+                        </div>
+                </div>
+                <div id="second_part">
+                    <div id="details">
+                        <div id="icon"><img src="{% static 'assets/icons/user.png' %}" alt="icon"></div>
+                        <div id="text">Profile</div>
+
+                        </div>
+                        <div id="details">
+                        <div id="icon"><img src="{% static 'assets/icons/report-columns.png' %}" alt="icon"></div>
+                        <div id="text">Dashboard</div>
+
+                        </div>
+                        <div id="details">
+                        <div id="icon"><img src="{% static 'assets/icons/upload.png' %}" alt="icon"></div>
+                        <div id="text">Upload & Extract</div>
+
+                        </div>
+                        <div id="details">
+                        <div id="icon"><img src="{% static 'assets/icons/bookmark-empty.png' %}" alt="icon"></div>
+                        <div id="text">Metadata Library</div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="bottom_sidebar">
+                <div id="support_section">
+                    <div id="support_image">
+                        <img src="{% static 'assets/images/Contact-support.png' %}" alt="contact support image">
+                    </div>
+                    <div id="support_button">
+                        <input type="button" value="Contact Support">
+                    </div>
+                </div>
+                <div id="logout">
+                    <div id="icon"><img src="{% static 'assets/icons/log-out.png' %}" alt="logout button"></div>
+                    <div id="log">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}">Logout</a>
+                        {% endif %}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End of Dashboard Side Pane -->
+
+        <!-- Navigation Bar -->
+        <div class="main-dashboard">
+            <nav class="navbar">
+                <a class="menubar" href="javascript:toggleSidePane()">
+                    <img src="{% static 'assets/icons/blue-menu.svg' %}" alt="blue menu" srcset="">
+                </a>
+                <div class="searchbar">
+                    <span id="searchicon">
+                        <img src="{% static 'assets/icons/search-normal.svg' %}" alt="Search">
+                    </span>
+                    <input type="search" name="search" placeholder="Search" id="searchinput">
+                </div>
+                <div class="navlinks">
+                    <div class="profile">
+                        <img class="profile-photo" src="{% static 'assets/images/download.jpeg' %}" alt="">
+                        
+                        <p class="profile-intro title">
+                            Hey, <span class="username">{{ user.username|default:'Guest' }}</span>
+                        </p>
+                    </div>
+                    <div class="notification">
+                        <a id="notif-bing" href="javascript:showNotif()">
+                            <img src="{% static 'assets/icons/white-notification-bing.svg' %}" alt="Notifications">
+                        </a>
+                        <a class="user" href="#">
+                            <img src="{% static 'assets/icons/white-user.svg' %}" alt="User">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navigation Bar -->
+
+            <!-- Navigation Popup -->
+            <div class="notif-popup" id="notif-popup">
+                <h3 class="notif-popup-heading">Disclaimer</h3>
+                <p class="notif-popup-text">
+                    Hey {{ user.username|default:'Guest' }}! Thank you for trusting our platform. 
+                    We would like you to know that this platform was created for educational purposes. 
+                    As much as we do not control what is done on the platform, 
+                    we advise that you use it safely for yourself and others.
+                </p>
+                <button class="primary-btn ok-btn " id="notif-popup-btn">OK</button>
+            </div>
+            <!-- End Navigation Popup -->
+            
+            <!-- Greeting and CTA buttons -->
+            <div class="welcome-wrapper">
+                <div class="welcome-div">
+                    <h1 class="title welcome-title">Welcome, {{ user.username|default:'Guest' }}</h1> <!-- {{user.username}} -->
+                    <p class="welcome-text">What would you like to do today?</p>
+                </div>
+                <div class="cta-btns">
+                    <button class="primary-btn upload-btn">
+                        <img src="{% static 'assets/icons/plus-white.png' %}" alt="Add" id="plus-icon">
+                        Upload File
+                    </button>
+                    <button class="secondary-btn">
+                        View Saved Metadata
+                    </button>
+                </div>
+            </div>
+            <!-- End Greeting and CTA buttons -->
+
+            <!-- Statistics Cards -->
+            {% comment %} <div class="stats-section">
+                <div class="stat-card">
+                        <div class="stat-header">
+                            <p class="stat-title">Extracted Metadata</p>
+                            <img src="assets/icons/orange-page.svg" alt="" class="stat-img">
+                        </div>
+                        <div class="stat-figures">
+                            <p class="stat-num">200</p>
+                            <p class="stat-percent">100%</p>
+                        </div>
+                        <div class="stat-files">
+                            <p class="stat-fname">120 <span class="stat-ftype">JPG</span></p>
+                            <p class="stat-fname">30 <span class="stat-ftype">PNG</span></p>
+                            <p class="stat-fname">20 <span class="stat-ftype">PDF</span></p>
+                            <p class="stat-fname">10 <span class="stat-ftype">CSV</span></p>
+                            <p class="stat-fname">20 <span class="stat-ftype">JSON</span></p>
+                        </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-title">Downloaded Metadata</p>
+                        <img src="assets/icons/orange-download.svg" alt="" class="stat-img">
+                    </div>
+                    <div class="stat-figures">
+                        <p class="stat-num">120</p>
+                        <p class="stat-percent">60%</p>
+                    </div>
+                    <div class="stat-files">
+                        <p class="stat-fname">30 <span class="stat-ftype">JPG</span></p>
+                        <p class="stat-fname">30 <span class="stat-ftype">PNG</span></p>
+                        <p class="stat-fname">10 <span class="stat-ftype">PDF</span></p>
+                        <p class="stat-fname">25 <span class="stat-ftype">CSV</span></p>
+                        <p class="stat-fname">25 <span class="stat-ftype">JSON</span></p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <p class="stat-title">Saved Metadata</p>
+                        <img src="assets/icons/orange-save-action-floppy.svg" alt="" class="stat-img">
+                    </div>
+                    <div class="stat-figures">
+                        <p class="stat-num">120</p>
+                        <p class="stat-percent">60%</p>
+                    </div>
+                    <div class="stat-files">
+                        <p class="stat-fname">30 <span class="stat-ftype">JPG</span></p>
+                        <p class="stat-fname">30 <span class="stat-ftype">PNG</span></p>
+                        <p class="stat-fname">10 <span class="stat-ftype">PDF</span></p>
+                        <p class="stat-fname">25 <span class="stat-ftype">CSV</span></p>
+                        <p class="stat-fname">25 <span class="stat-ftype">JSON</span></p>
+                    </div>
+                </div>
+            </div>  {% endcomment %}
+            <!-- End Statistics Cards -->
+
+            <!-- Recently Saved Section -->
+            <div class="recents-section">
+                <div class="recents-header">
+                    <h3 class="title recents-heading">Recently Saved</h3>
+                    <a href="#" class="recents-more">See more</a>
+                </div>
+                <!-- Recently saved items -->
+                <div class="recents-wrapper">
+                    <div class="recents-item">
+                        <div class="recents-img">
+                            <img src="{% static 'assets/icons/white-page.svg' %}" alt="" class="recents-fileicon"> <!-- File icon image -->
+                        </div>
+                        <div class="recents-info">
+                            <h4 class="recents-title">How To Fetch Metadata Like A Professional</h4>
+                            <span class="recents-props">
+                                <small>PDF</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>15mb</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>23 Jun 2022</small>
+                            </span>
+                        </div>
+                        <div class="recents-actionbtns">
+                            <div>
+                                <!-- id="download-dropdown" class="recents-actionbtn" -->
+                                <a href="javascript:exportOptions()"  id="download-dropbtn" class="recents-actionbtn">
+                                    <img src="{% static 'assets/icons/blue-download.svg' %}" alt="" class="recents-actionimg download-btn"> <!-- Download icon -->
+                                </a>
+                                <div id="download-dropcontent" class="download-dropcontent">
+                                    <a>JPG</a>
+                                    <hr>
+                                    <a>PNG</a>
+                                    <hr>
+                                    <a>PDF</a>
+                                    <hr>
+                                    <a>TXT</a>
+                                </div>
+                            </div>
+                            <a href="javascript:share()" class="recents-actionbtn" id="share-dropbtn">
+                                <img src="{% static 'assets/icons/blue-share-android.svg' %}" alt="" class="recents-actionimg share-btn"> <!-- Share icon -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="recents-item">
+                        <div class="recents-img">
+                            <img src="{% static 'assets/icons/white-media-image.svg' %}" alt="" class="recents-fileicon"> <!-- Image icon image -->
+                        </div>
+                        <div class="recents-info">
+                            <h4 class="recents-title">Beach Hangout</h4>
+                            <span class="recents-props">
+                                <small>PNG</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>4mb</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>26 Jun 2022</small>
+                            </span>
+                        </div>
+                        <div class="recents-actionbtns">
+                            <img src="{% static 'assets/icons/blue-download.svg' %}" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="{% static 'assets/icons/blue-share-android.svg' %}" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
+                        </div>
+                    </div>
+                    <div class="recents-item">
+                        <div class="recents-img">
+                            <img src="{% static 'assets/icons/white-media-image.svg' %}" alt="" class="recents-fileicon"> <!-- Image icon image -->
+                        </div>
+                        <div class="recents-info">
+                            <h4 class="recents-title">Metamagic Mockup Screen</h4>
+                            <span class="recents-props">
+                                <small>JPEG</small>
+                                
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>5mb</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>6 May 2022</small>
+                            </span>
+                        </div>
+                        <div class="recents-actionbtns">
+                            <img src="{% static 'assets/icons/blue-download.svg' %}" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="{% static 'assets/icons/blue-share-android.svg' %}" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
+                        </div>
+                    </div>
+                    <div class="recents-item">
+                        <div class="recents-img">
+                            <img src="{% static 'assets/icons/white-page.svg' %}" alt="" class="recents-fileicon"> <!-- File icon image -->
+                        </div>
+                        <div class="recents-info">
+                            <h4 class="recents-title">Steal Like An Artist</h4>
+                            <span class="recents-props">
+                                <small>PDF</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>12mb</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>23 Jun 2022</small>
+                            </span>
+                        </div>
+                        <div class="recents-actionbtns">
+                            <img src="{% static 'assets/icons/blue-download.svg' %}" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="{% static 'assets/icons/blue-share-android.svg' %}" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
+                        </div>
+                    </div>
+                    <div class="recents-item">
+                        <div class="recents-img">
+                            <img src="{% static 'assets/icons/white-page.svg' %}" alt="" class="recents-fileicon"> <!-- File icon image -->
+                        </div>
+                        <div class="recents-info">
+                            <h4 class="recents-title">I4G & Zuri Company Profile</h4>
+                            <span class="recents-props">
+                                <small>PDF</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>25mb</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>20 Jun 2022</small>
+                            </span>
+                        </div>
+                        <div class="recents-actionbtns">
+                            <img src="{% static 'assets/icons/blue-download.svg' %}" alt="" class="recents-actionbtn" id="download-btn" > <!-- Download icon -->
+                            <img src="{% static 'assets/icons/blue-share-android.svg' %}" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
+                        </div>
+                    </div>
+                    <div class="recents-item">
+                        <div class="recents-img">
+                            <img src="{% static 'assets/icons/white-page.svg' %}" alt="" class="recents-fileicon"> <!-- File icon image -->
+                        </div>
+                        <div class="recents-info">
+                            <h4 class="recents-title">Team 89 Weekly Attendance List</h4>
+                            <span class="recents-props">
+                                <small>CSV</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>456kb</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>15 May 2022</small>
+                            </span>
+                        </div>
+                        <div class="recents-actionbtns">
+                            <img src="{% static 'assets/icons/blue-download.svg' %}" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="{% static 'assets/icons/blue-share-android.svg' %}" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
+                        </div>
+                    </div>
+                    <div class="recents-item">
+                        <div class="recents-img">
+                            <img src="{% static 'assets/icons/white-page.svg' %}" alt="" class="recents-fileicon"> <!-- File icon image -->
+                        </div>
+                        <div class="recents-info">
+                            <h4 class="recents-title">Metamagic Landing Page Backend</h4>
+                            <span class="recents-props">
+                                <small>JSON</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>4mb</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>17 Feb 2022</small>
+                            </span>
+                        </div>
+                        <div class="recents-actionbtns">
+                            <img src="{% static 'assets/icons/blue-download.svg' %}" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="{ static 'assets/icons/blue-share-android.svg' %}" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
+                        </div>
+                    </div>
+                    <div class="recents-item">
+                        <div class="recents-img">
+                            <img src="{% static 'assets/icons/white-page.svg' %}" alt="" class="recents-fileicon"> <!-- File icon image -->
+                        </div>
+                        <div class="recents-info">
+                            <h4 class="recents-title">Zuri Project Phase Terms and Conditions</h4>
+                            <span class="recents-props">
+                                <small>DOC</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>96kb</small>
+                                <img src="{% static 'assets/icons/ellipse.svg' %}" alt="" class="bullet-point"> <!-- Bullet point image -->
+                                <small>14 Jan 2022</small>
+                            </span>
+                        </div>
+                        <div class="recents-actionbtns">
+                            <img src="{% static 'assets/icons/blue-download.svg' %}" alt="" class="recents-actionbtn" id="download-btn"> <!-- Download icon -->
+                            <img src="{% static 'assets/icons/blue-share-android.svg' %}" alt="" class="recents-actionbtn" id="share-btn"> <!-- Share icon -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End recently saved items -->
+            </div>
+            <!-- End Recently Saved Section -->
+
+            <!-- Download Button Popup -->
+            <!-- End Download Button Popup -->
+            
+            <!-- Share Button Popup -->
+            <div class="share-popup" id="share-popup">
+                <div class="share-popup-heading">
+                    <h3>Share <span>Metadata</span> File</h3>
+                    <img src="{% static 'assets/icons/delete-circled-outline.svg' %}" alt="Close">
+                </div>
+                <div class="share-popup-add">
+                    <p>Add people and groups</p>
+                </div>
+                <div class="share-popup-owner">
+                    <p>People with access</p>
+                    <div class="spo-details">
+                        <div class="spo-userinfo"> <!--  -->
+                            <span><img src="{% static 'assets/images/download.jpeg' %}" alt="" class="spo-img"></span>
+                            <div class="spo-uid">
+                                <p class="spo-blue-text" id="spo-name">Demola Daniels</p>
+                                <small class="spo-small-text" id="spo-mail">demoladaniels@gmail.com</small>  
+                            </div>
+                        </div>
+                        <p class="spo-blue-text">Owner</p>
+                    </div>
+                </div>
+                <div class="share-popup-access">
+                    <p>General Access</p>
+                    <div class="spa-details">
+                        <div class="spa-userinfo">
+                            <img src="assets/icons/www.svg" alt="">
+                            <div>
+                                <p class="text-dropdown spo-blue-text">Anyone with the link <span class="arrow-down"><img src="assets/icons/darkblue-nav-arrow-down.svg" alt=""> </span> </p>
+                                <small class="spo-small-text">Anyone with the link can view</small>
+                            </div>
+                        </div>
+                        <p class="text-dropdown spo-blue-text">Viewer <span class="arrow-down"><img src="assets/icons/darkblue-nav-arrow-down.svg" alt=""></span></p>
+                    </div>
+                </div>
+                <div class="share-popup-btns">
+                    <button type="submit" class="primary-btn" id="copy-link-btn">
+                        <img src="assets/icons/attachment.svg" alt="" class="copy-link">
+                        Copy Link
+                    </button>
+                    <button type="submit" class="secondary-btn" id="done-btn">Done</button>
+                </div>
+            </div>
+            <!-- End Share Button Popup -->
+
+            <!-- File Types Section -->
+            <div class="files-section">
+                <div class="files-header">
+                    <h3 class="files-title title">File Types</h3>
+                    <!-- <img src="" alt=""> Filter icon -->
+                </div>
+                <div class="files-carousel">
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-media-image.svg" alt="">
+                        </span>
+                        <p>PNG</p>
+                    </div>
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-page.svg" alt="">
+                        </span>
+                        <p>XLS</p>
+                    </div>
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-database-script.svg" alt="">
+                        </span>
+                        <p>JSON</p>
+                    </div>
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-page.svg" alt="">
+                        </span>
+                        <p>PDF</p>
+                    </div>
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-page.svg" alt="">
+                        </span>
+                        <p>DOC</p>
+                    </div>
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-media-image.svg" alt="">
+                        </span>
+                        <p>DVI</p>
+                    </div>
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-page.svg" alt="">
+                        </span>
+                        <p>TXT</p>
+                    </div>
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-media-image.svg" alt="">
+                        </span>
+                        <p>HEIC</p>
+                    </div>
+                    <div class="files-item">
+                        <span class="files-img">
+                            <img src="assets/icons/white-page.svg" alt="">
+                        </span>
+                        <p>CSV</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End File Types Section -->
+        </div>
+
+        <script>
+            function toggleSidePane(){
+                const sidepane = document.getElementById("dashboard_details");
+                sidepane.style.display = "block";
+                sidepane.style.zIndex = 1;
+
+                document.onclick = function(e){
+                    if(e.target.id !== "dashboard_details"){
+                        sidepane.style.display = "none";
+                    }
+                }
+            }
+            function showNotif(){
+                // show disclaimer modal
+                const disclaimer = document.getElementById("notif-popup");
+                disclaimer.style.display = "flex";
+
+                document.onclick = function(e){
+                    if(e.target.id !== "notif-popup" || e.target.id == "notif-popup"){
+                        disclaimer.style.display = "none";
+                    }
+                }
+            }
+            function exportOptions(){
+                const exportBtn = document.getElementById("download-dropbtn");
+                const exportOptions = document.getElementById("download-dropcontent");
+                exportOptions.style.display = "flex";
+
+                document.onclick = function(e){
+                    if(e.target.id !== "download-dropbtn" || e.target.id !== "download-dropcontent"){
+                        exportOptions.style.display = "none";
+                    }
+                }
+            }
+            function share(){
+                const shareBtn = document.getElementById("share-dropbtn");
+                const sharePopup = document.getElementById("share-popup");
+                sharePopup.style.display = "flex";
+
+                document.onclick = function(e){
+                    if(e.target.id !== "share-btn"){
+                        sharePopup.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </main>
+    {% endblock %}
+    <!-- End of Main Sections -->
+</body>
+</html>

@@ -1,0 +1,483 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?s5n2ad');
+  src:  url('../fonts/icomoon.eot?s5n2ad#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?s5n2ad') format('truetype'),
+    url('../fonts/icomoon.woff?s5n2ad') format('woff'),
+    url('../fonts/icomoon.svg?s5n2ad#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dashboard:before {
+  content: "\e900";
+}
+.icon-library:before {
+  content: "\e901";
+}
+.icon-log-out:before {
+  content: "\e902";
+}
+.icon-phone:before {
+  content: "\e903";
+}
+.icon-upload:before {
+  content: "\e904";
+}
+.icon-userusers:before {
+  content: "\e905";
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body{
+	height: 1024px;
+
+}
+
+main{
+	display: grid;
+  grid-template-columns: 27% 54% 29%; 
+  height: 1024px;
+
+}
+
+/*--- user dashboard or profile area*/
+.profile-area{
+	background-color: #FFFFFF;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.profile-area div{
+	text-align: center; 
+}
+
+#logo-container{
+  margin-top: 48px;
+  
+}
+
+.meta-logo{
+	width: 264px;
+	height: 48.4px;
+}
+a{
+  text-decoration: none;
+}
+.user-profile{
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.img-border{
+    /* Create the circle */
+    width: 112px;
+    height: 112px;
+    border: 4px solid #FC7C1C; 
+    border-radius: 120%;
+    /* Halve the circle */
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    /* Rotate the circle */
+    transform: rotate(-20deg);
+}
+  
+.profile-image img{
+  width: 102px;
+  height: 102px;
+  border-radius: 100px;
+  transform: rotate(20deg);
+}
+.profile-details{
+  margin-top: 8px;
+}
+
+.profile-details h3{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #196DDC;
+}
+
+.profile-details p{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+
+.user{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 8px 92px 8px 48px;
+	gap: 8px;
+	width: 348px;
+	height: 62px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #196DDC;
+}
+
+.user:hover{
+  background: #C8E1E1;
+}
+
+
+.user:active {
+  background-color: #196DDC;
+  color: #FFFFFF;
+}
+
+
+
+.support{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 216px;
+  padding: 8px 92px 8px 48px;
+	gap: 8px;
+ 
+}
+
+
+.log-out{
+  display: flex;
+  margin-top: auto;
+  width: 100%;
+  margin-bottom: 100px;
+  align-items: center;
+	padding: 8px 92px 8px 48px;
+	gap: 8px;
+	height: 46px;
+}
+
+/*middle part----file upload-area*/
+.upload-area{
+	background-color: #E5E6E6;
+	
+	height: 100%;
+
+}
+
+.upload-area-item{
+	margin-top: 48px;
+  margin-left: 49px;
+  margin-right: 77px;
+  margin-bottom: 0;
+}
+
+
+.upload-area-item h3{
+  font-weight: 500;
+  font-size: 32px;
+  color: #196DDC;
+}
+
+.upload-area-item p{
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #2A2A2A;
+}
+
+.left-arrow{
+  display: none;
+}
+
+.orange{
+	color: #FC7C1C;
+}
+
+#box{
+  margin-top: 16px;
+  margin-left: 49px;
+  margin-right: 77px;
+  margin-bottom: 0;
+  border: dashed 1px #196DDC;
+  height: 528px;
+  max-width: 584px;
+}
+
+#box.actives{
+  border: dashed 2px #2A2A2A;
+}
+
+.box-content{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 429px;
+  align-items: center;
+  justify-content: center;
+}
+
+.drag{
+  text-align: center;
+  margin-top: 60%;
+}
+
+.drag h3{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  font-style: normal;
+  color: #196DDC;
+  justify-content: center;
+  align-items: center
+}
+
+.maxFile{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  font-style: normal;
+  color: #8B8B8B;
+  margin-top: 20%;
+}
+
+form{
+  border: solid 2px #196DDC;
+  border-radius: 4px;
+  max-width: 584px;
+  margin-top: 32px;
+  margin-left: 49px;
+  
+}
+
+
+
+form input[type=submit]{
+  background: #196DDC;
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+  height: 56px;
+  border: solid 2px #196DDC;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+/*Last part-----Keywords*/
+.supfiles-area{
+	background-color: #D1E2F8;
+	
+	height: 100%;
+}
+
+.supfiles-area-item{
+	margin: 48px 24px;
+}
+
+.supfiles-area-item h3{
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #114993;
+  margin-bottom: 8px;
+}
+
+.supfiles-area-item p{
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #2A2A2A;
+
+}
+
+.meta-key-items{
+	margin: 64px 24px; 
+	display: flex;
+	flex-direction: column;
+}
+
+.meta-key-items h3{
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #114993;
+  margin-bottom: 8px;
+}
+
+.meta-key-items p{
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #2A2A2A;
+}
+
+/* -------------------- MEDIA QUERIES FOR MOBILE: HERE WE GO ------------------*/
+@media screen and (max-width: 600px) {
+  body {
+    width: 428px;
+    height: 926px;
+    background: #C8E1E1;
+  }
+
+  main{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .profile-area{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+  }
+  
+  .upload-area{
+	height: 716px;
+	width: 428px;
+  }
+	.left-arrow{
+    display: inline;
+    margin-right: 24px;
+  }
+
+  .upload-area-item {
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+}
+	
+	.upload-area-item h3{
+    display: flex;
+    font-weight: 600;
+    line-height: 40px;
+    font-size: 32px;
+    color: #196DDC;
+	}
+
+
+	
+	#box{
+    height: 350px;
+    width: 365px;
+    margin-left: 16px;
+	}
+	
+	.box-content{
+  padding: 5px;
+  height: 240px;
+	}
+	
+	.drag{
+	  text-align: center;
+	  margin-top: 0%;
+	  font-size: 15px;
+	}
+	
+	.maxFile{
+    
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 0;
+	  
+	}
+
+  form {
+    border: solid 2px #196DDC;
+    border-radius: 4px;
+    max-width: 365px;
+    margin-top: 32px;
+    margin-left: 16px;
+}
+	
+	.supfiles-area{
+    background-color: #D1E2F8;
+    height: 460px;
+	}
+  .supfiles-area-item {
+    margin: 16px 16px;
+}
+  .supfiles-area-item h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #114993;
+    margin-bottom: 8px;
+  }
+
+  .supfiles-area-item p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px
+
+  }
+  .meta-key-items{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 16px 16px;
+	}
+
+	.meta-key-items h3{
+	  display: block;
+	  width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #114993;
+
+	}
+  .meta-key-items p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #454545;
+
+
+
+  }
+  
+  
+   
+  
+}
+  
+
+
+
+  
+  

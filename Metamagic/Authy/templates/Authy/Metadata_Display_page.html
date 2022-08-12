@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="metadata_css\metadatadisplay.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="metadata.js"></script>
+    <title>Metadata Display</title>
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <!-- NAVIGATION BAR STARTS-->
+      <div class="flex-child magenta">
+        <br />
+
+        <div>
+          <div id="logo">
+            <img id="white_logo" src="media/White Logo.png" alt="" />
+            <img
+              id="close_icon"
+              onclick="yokes()"
+              src="media/delete-circled-outline.png"
+              alt=""
+            />
+          </div>
+          <br /><br />
+
+          <!-- USER NAME  -->
+          <div id="user_profile">
+            <div id="profile_image">
+              <img src="media\Frame 2.png" alt="" />
+            </div>
+            <div id="userame_jobtype">
+              <div id="username">
+                <p>Demola Daniels</p>
+              </div>
+              <p class="center">Metadata Analyst</p>
+            </div>
+          </div>
+
+          <!-- USER NAME END  -->
+          <br /><br /><br /><br />
+        </div>
+
+        <!-- NAVIGATION  LINKS STARTS-->
+        <ul>
+          <li>
+            <a href="#profile"
+              ><img src="media/user.png" alt="" /> &nbsp;&nbsp; Profile</a
+            >
+          </li>
+          <li>
+            <a href="#dashboard"
+              ><img src="media/report-columns.png" alt="" />&nbsp;&nbsp;&nbsp;
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#upload_and_extract"
+              ><img src="media/upload.png" alt="" /> &nbsp; Upload & Extract</a
+            >
+          </li>
+          <li>
+            <a href="#metadata_library" class="active"
+              ><img
+                src="media/bookmark-empty-white.png"
+                alt=""
+              />&nbsp;&nbsp;&nbsp;Metadata Library</a
+            >
+          </li>
+        </ul>
+        <br /><br /><br /><br /><br />
+        <!-- NAVIGATION LINKS ENDS-->
+
+        <!-- LOGOUT BUTTON  -->
+        <ul>
+          <li>
+            <a href="#logout"
+              ><img src="media/log-out.png" alt="" /> &nbsp;&nbsp; Logout</a
+            >
+          </li>
+        </ul>
+        <!-- LOGOUT BUTTON ENDS  -->
+        <br /><br /><br />
+      </div>
+      <!-- NAVIGATION BAR STARTS-->
+      <div class="flex-child green">
+        <br /><br /><br />
+        
+       
+          
+           
+      
+          <br />
+        </tr>
+
+        <br /><br />
+        <table id="table_deco">
+          <tr class="rows">
+            <td> <p class="header"> <img src="media\Vector.png" alt="arrow" /> File Metadata</p></td>
+          
+          </tr>
+          <tr class="rows">
+            <td>File Name</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>File Size</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>File Type</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>File Extension</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>File Category</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>Author/Creator</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>Storage Location</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>Date Created</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>Date Created</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>Date Modified</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>Last Edited</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>Format</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td>Copyright</td>
+            <td class="value">Value</td>
+          </tr>
+          <tr class="rows">
+            <td class="btn_items">
+              <br /><a href="#"
+              ><button class="Save_btn">Save to Library</button></a>
+            </td>
+            <td class="btn_items">
+              <div class="value">
+                <img src="media/download-square-outline.svg" alt="download" />
+                <img src="media/share-android.svg" alt="share" />
+                <img src="media\Embed.svg" alt="embedded" />
+              </div>
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+  </body>
+</html>

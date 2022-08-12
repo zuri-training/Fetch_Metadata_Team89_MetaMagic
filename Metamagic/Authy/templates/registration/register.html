@@ -1,0 +1,67 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP PAGE</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}" type="text/css"/>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <nav>
+        <a href="#"><img class="logo" src="{% static 'img/images/logo frame.svg' %}" alt="logo" /></a>
+        </nav>
+        <div class="flex">
+            <div class="box">
+                <div>
+                    <h1>Create an account</h1>
+                    <span class="bigger">Let's get started</span>
+                    <br>
+                    <br>
+                    <form method="POST" action="." id="register-form">
+                            {% csrf_token %}
+                        <label class="lbl"><b>Username</b></label>
+                        {{form.username}}
+                        {% comment %} <input type="text" placeholder="Enter full name" name="fname" required> {% endcomment %}
+                        <br>
+                        <label class="lbl"><b>Email Address</b></label>
+                        {{form.email}}
+                        {% comment %} {{form.email}} {% endcomment %}
+                        {% comment %} <input type="text" placeholder="Enter email address" name="email" required> {% endcomment %}
+                        <br>
+                        <label class="lbl"><b>Password</b></label>
+                        {{form.password1}}
+                        {% comment %} {{form.password}} {% endcomment %}
+                        {% comment %} <input type="password" placeholder="Enter password" name="password1" required> {% endcomment %}
+                        <br>
+                        <label class="lbl"><b>Confirm Password</b></label>
+                        {{form.password2}}
+                        {% comment %} {{form.pass2}} {% endcomment %}
+                        {% comment %} <input type="password" placeholder="Enter password again" name="password2" required> {% endcomment %}
+                    </form>
+                </div>
+                <br>
+                <div class="rem">
+                    <div>
+                        <input id="cb" type="checkbox">
+                        <label for="cb" class="abcd">I agree to terms and conditions</label>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" value="submit" class="btn btn-primary">Sign up</button>
+                    <p>Already have an account? <a href="./login.html">Sign in</a></p>
+                </div>
+            </div>
+            <div class="img2">
+                <img src="{% static 'img/images/undraw_sign up 1.svg' %}" alt="signup image" />
+            </div>
+        </div>
+        
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -6,27 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="mobilestyle.css" media="screen and (max-width: 600px)">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
+    <div class="sidepane" id="sidepane">
+        <div class="sidepane-header">
+            <img class="logo" id="side-logo" src="./img/logo frame.svg" alt="metamagic">
+            <a href="javascript:closePane()">
+                <img src="./img/orange-cancel.svg" alt="close" id="close">
+            </a>
+        </div>
+        <div class="sidepane-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="sidepane-btns">
+            <a href="#"><button class="btn btn-secondary sidepane-btn">Log In</button></a>
+            <a href="#"><button class="btn btn-tertiary sidepane-btn">Sign Up</button></a>
+        </div>
+    </div>
     <header>
-            <div class="navbr">
-                <img class="logo" src="./img/logo frame.svg" alt="logo" />
-                <nav>
-                    <ul class="nav-links">
-                        <li><p class="blue">Home</p></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                    <div class="but">
-                        <a href="#"><button class="btn btn-secondary">Log In</button></a>
-                        <a href="#"><button class="btn btn-tertiary">Sign Up</button></a>
-                    </div>
+        <div class="navbr">
+            <img class="logo" src="./img/logo frame.svg" alt="logo" />
+            <nav>
+                <ul class="nav-links">
+                    <li><p class="blue">Home</p></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="but">
+                <a href="#"><button class="btn btn-secondary">Log In</button></a>
+                <a href="#"><button class="btn btn-tertiary">Sign Up</button></a>
             </div>
-            <br>
-    </header>
+            <a href="javascript:toggleSidePane()" id="menubar">
+                <img src="img/blue-menu.svg" alt="">
+            </a>
+        </div>
+        <br>
+    </header> 
     <main>
         <div class="box-1">
             <div class="text-1">
@@ -35,54 +56,47 @@
                 <p class="para">Metamagic is a platform that provides <br> users with all the tools needed to <br> access and generate metadata</p>
                 <a href="#"><button class="btn btn-quart">Get Started</button></a>
             </div>
-            <div>
+            <div class="img11-wrapper">
                 <img class="img11" src="./img/Frame.svg" alt="img11">
             </div>
         </div>
         <div class="box">
-        <p class="para-2">Supports image files, PDF, CSV and JSON files</p>
-        </div>
-        <br>
-        <br>
-        <br>
+            <p class="para-2">Supports image files, PDF, CSV and JSON files</p>
         </div>
         <div class="box-2">
             <p class="para-3">Manage all your metadata files <br> easily with a simplified dashboard</p>
             <img src="./img/Frame1.svg" alt="img12">
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a id="features-anchor"></a>
         <div class="box-3">
             <div class="iconflex">
                 <img src="./img/upload-icon.svg" alt="upload-icon">
                 <div class="bounce">
                     <h3>Upload and Generate Files</h3>
-                    <p>Metamagic allows users upload and generate <br> metadata for specific file type in no time with <br> just a click</p>
+                    <p>
+                        Metamagic allows users upload and generate 
+                        metadata for specific file type in no time with just a click
+                    </p>
                 </div>
             </div>
             <div class="iconflex">
                 <img src="./img/download-icon.svg" alt="download-icon">
                 <div class="bounce">
                     <h3>Download Files</h3>
-                    <p>Download all generated metadata directly into any <br> type of device you use the platform on</p>
+                    <p>Download all generated metadata directly into any type of device you use the platform on</p>
                 </div>
             </div>
             <div class="iconflex">
                 <img src="./img/share-icon.svg" alt="share-icon">
                 <div class="bounce">
                     <h3>Share Files</h3>
-                    <p>The share feature helps you share metadata <br> with anyone online or offline</p>
+                    <p>The share feature helps you share metadata with anyone online or offline</p>
                 </div>
             </div>
             <div class="iconflex">
                 <img src="./img/embed-icon.svg" alt="embed-icon">
                 <div class="bounce">
                     <h3>Website Embed</h3>
-                    <p>Developers get the opportunity to easily embed <br> generated metadata into a website's code</p>
+                    <p>Developers get the opportunity to easily embed generated metadata into a website's code</p>
                 </div>
             </div>
             <div class="iconflex">
@@ -96,74 +110,87 @@
                 <img src="./img/export-icon.svg" alt="export-icon">
                 <div class="bounce">
                     <h3>Export Files</h3>
-                    <p>The platform helps you export metadata in a <br> text format into a folder</p>
+                    <p>The platform helps you export metadata in a text format into a folder</p>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
+        <!-- <br><br> -->
+        
         <div class="box-4">
-            <p class="para-4">See why people choose <br> metamagic</p>
+            <p class="para-4">See why people choose <br> Metamagic</p>
             <br>
-            <div>
+            <div class="testimonial-imgs">
                 <img class="img14" src="./img/Commentsvg.svg" alt="img14">
-                <img src="./img/Commentsectionsvg.svg" alt="img15">
+                <img class="img14" src="./img/Commentsectionsvg.svg" alt="img14">
             </div>
         </div>
+        <!-- <br>
         <br>
         <br>
         <br>
-        <br>
-        <br>
+        <br> -->
         <div class="box-5">
-            <img src="./img/Frame 48095566.svg" alt="img15">
+            <img src="./img/Frame 48095566.svg" alt="img15" id="img15">
         </div>
-        <br>
-        <br>
+        <!-- <br>
+        <br> -->
         <div class="box-6">
             <p class="para-5">Start generating metadata.</p>
-            <a href="#"><button class="btn btn-primary">Sign up for free</button></a>
+            <button class="btn btn-primary">Sign up for free</button>
         </div>
     </main>
     <footer>
-        <div>
+        <div class="footer-branding">
             <img class="logo-2" src="./img/logo-2.svg" alt="logo">
-            <p class="copyright">Copyright &copy; 2022.</p>
+            <small class="copyright">Copyright &copy; 2022.</small>
         </div>
         <div class="features">
-            <ul>
-                <li class="oran">Features</li>
-                <li>Generate Metadata</li>
-                <li>Save & Download</li>
-                <li>Embed</li>
-                <li>Share</li>
-                <li>Export</li>
-            </ul>
+            <p class="oran">Features</p>
+            <small>Generate Metadata</small>
+            <small>Save & Download</small>
+            <small>Embed</small>
+            <small>Share</small>
+            <small>Export</small>
         </div>
         <div class="quicklinks">
-            <ul>
-                <li class="oran">Quicklinks</li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Support</a></li>
-                <li><a href="#">Documentation</a></li>
-            </ul>
+            <p class="oran">Quicklinks</p>
+            <a href="#">About Us</a>
+            <a href="#">Contact Support</a>
+            <a href="#">Documentation</a>
         </div>
         <div class="stretch">
-            <div  class="icons">
-                <ul>
-                    <li>
+            <div class="icons">
+                <!-- <ul>
+                    <li> -->
                         <a class="orange" href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
+                    <!-- </li>
+                    <li> -->
                         <a class="orange" href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
+                    <!-- </li>
+                    <li> -->
                         <a class="orange" href="#"><i class="fab fa-twitter"></i></a>
-                    </li>
-                </ul>
+                    <!-- </li>
+                </ul> -->
             </div>
-            <ul class="disclaim"><li>Disclaimer</li></ul>
+            <small class="disclaim">Disclaimer</small>
         </div>
     </footer>
+    <script>
+        function toggleSidePane(){
+            const sidepane = document.getElementById("sidepane");
+            sidepane.style.display = "flex";
+            sidepane.style.zIndex = 1;
+
+            document.onclick = function(e){
+                if(e.target.id !== "sidepane"){
+                    sidepane.style.display = "none";
+                }
+            }
+        }
+        function closePane(){
+            const sidepane = document.getElementById("sidepane");
+            sidepane.style.display = "none";
+        }
+    </script>
 </body>
 </html>

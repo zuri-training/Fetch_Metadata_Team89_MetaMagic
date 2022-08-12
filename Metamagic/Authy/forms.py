@@ -20,7 +20,7 @@ class NewUserForm(UserCreationForm):
     username = forms.CharField(max_length=101)
     first_name = forms.CharField(max_length=101)
     last_name = forms.CharField(max_length=101)
-    # email = forms.EmailField()
+    email = forms.EmailField()
 
     class Meta:
         model = User

@@ -23,9 +23,26 @@
                     <br>
                     <form method="POST" action="." id="register-form">
                             {% csrf_token %}
-                        <label class="lbl"><b>Username</b></label>
+
+                            {% for field in form %}
+                                <div>
+                                    <label class="lbl"><b>{{ field.label }} </b></label> 
+
+                                    {{ field }}
+                                <br />
+
+                                    {% for error in field.errors %}
+                                        <small style="color: red">{{ error }}</small>
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
+                        <!-- <label class="lbl"><b>Username</b></label>
                         {{form.username}}
                         {% comment %} <input type="text" placeholder="Enter full name" name="fname" required> {% endcomment %}
+                        <label class="lbl"><b>First Name</b></label>
+                        {{form.first_name}}
+                        <label class="lbl"><b>Last Name</b></label>
+                        {{form.last_name}}
                         <br>
                         <label class="lbl"><b>Email Address</b></label>
                         {{form.email}}
@@ -39,9 +56,7 @@
                         <br>
                         <label class="lbl"><b>Confirm Password</b></label>
                         {{form.password2}}
-                        {% comment %} {{form.pass2}} {% endcomment %}
-                        {% comment %} <input type="password" placeholder="Enter password again" name="password2" required> {% endcomment %}
-                    </form>
+                        {% comment %} <input type="password" placeholder="Enter password again" name="password2" required> {% endcomment %} -->
                 </div>
                 <br>
                 <div class="rem">
@@ -55,6 +70,7 @@
                     <button type="submit" value="submit" class="btn btn-primary">Sign up</button>
                     <p>Already have an account? <a href="./login.html">Sign in</a></p>
                 </div>
+            </form>
             </div>
             <div class="img2">
                 <img src="{% static 'img/images/undraw_sign up 1.svg' %}" alt="signup image" />

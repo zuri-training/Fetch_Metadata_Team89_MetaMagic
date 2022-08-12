@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #F6F6F6;
+  margin: 0;
+}
+.container{
+    background: #F6F6F6;
+    padding: 0 150px;
+    margin: 0 auto;
+    height: auto;
+    width: 1440px;
+    max-width: 100%;
+    overflow: hidden;
+}
+/* started styling of nav bar */
+.navbr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 6%;
+}
+.logo{
+  cursor: pointer;
+}
+/* line 30 was set so that all the texts can take the necessary properties, take note of the tags, so you won't make a mistake */
+ul li, p, footer ul a{
+  transition: all 0.1s ease 0s;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.nav-links{
+  list-style: none;
+}
+.nav-links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+li a{
+  transition: all 0.1s ease 0s;
+  text-decoration: none;
+  color: #2A2A2A;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.nav-links li a:hover{
+  color: #FC9242;
+}
+nav ul .blue{
+  color: #196DDC;
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+/* if you have other buttons in the page, take note of the focus and hover, they are similar properties */
+.btn-secondary{
+  width: 122px;
+  height: 48px;
+  left: 1079px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  top: 32px;
+  background: #F6F6F6;
+  border: 3px solid #196DDC;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #196DDC;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.btn-secondary:hover{
+  border: 3px solid #114993;
+  box-shadow: 0px 1px 8px 1px #114993;
+}
+.btn-secondary:focus{
+  border: 3px solid #082449;
+  color: #082449;
+}
+/* btn-tertiary is the common button used */
+.btn-tertiary{
+  width: 122px;
+  height: 48px;
+  left: 119px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #196DDC;
+  border: 2px solid #196DDC;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #F6F6F6;
+  cursor: pointer;
+}
+.btn-tertiary:hover{
+  background: #114993;
+  color: #FFFFFF;
+}
+.btn-tertiary:focus{
+  background: #082449;
+}
+/* nav bar ends here */
+
+
+
+/*  body starts here */
+main {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #F6F6F6;
+  margin: 0;
+}
+.content {
+  display: flex;
+}
+.about_header{
+  /* display: flexbox; */
+  width: 50%;
+}
+.about_us{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 40px;
+  color: #196DDC;
+  align-items: 50%;
+  padding-left: 30%;
+  margin-top: 5%;
+  margin-bottom: 40px;
+}
+.paragraph{
+  font-family: 'IBM Plex Sans' sans-serif;
+  color: #2A2A2A;
+  text-align: left;
+  padding-left: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  white-space: nowrap;
+}
+.img{
+  width: 60%;
+  object-fit: cover;
+  padding-left: 50px;
+  padding-right: 10%;
+} 
+.img123{
+  margin-left: -80px;
+}
+picture{
+  display: contents;
+  
+}
+.container{
+  display: flexbox;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.team_profile{
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #196DDC;
+}
+.team-name{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 28px;
+  text-align: center;
+  color: #196DDC;
+  white-space: nowrap;
+}
+.img-2{
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+/* body ends here */
+
+
+
+/* footer starts here */
+footer{
+  position: absolute;
+  width: 100%;
+  height: 304px;
+  background: #114993;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
+}
+footer ul{
+  list-style: none;
+}
+footer ul a:hover{
+  color: #FC9242;
+}
+.orange{
+  color: #FC9242;
+  font-size: 27px;
+}
+.oran{
+  color: #FC9242;
+}
+.copyright{
+  margin-top: 140px;
+}
+.quicklinks{
+  margin-top: -8px;
+  margin-right: 200px;
+}
+.features{
+  margin-top: 40px;
+}
+.icons ul li{
+  display: inline-block;
+  padding: 0px 7px;
+}
+.stretch{
+  margin-top: 130px;
+  margin-right: 150px;
+}
+.disclaim{
+  margin-left: 25px;
+}
+/* footer ends here */
+
+
+
+/* mobile view starts in here */
+@media only screen and (max-width: 600px) {
+  body{
+    width: 428px;
+    height: 926px;
+  }
+  .content {
+    display: block;
+  }
+  .img123{
+    width: 350px;
+    height: 350px;
+    margin-left: -100px;
+  }
+  .img122{
+    width: 350px;
+    height: 350px;
+    margin-top: -120px;
+  }
+  .about_header{
+    width: 100%;
+    height: 100vh;
+    padding: 10%;
+  }
+  .about_us{
+    font-size: 28px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .paragraph{
+    margin-left: -85px;
+  }
+  footer{
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+  .features{
+    margin-top: 10px;
+  }
+  .quicklinks{
+    margin-top: -8px;
+    margin-right: 200px;
+  } 
+}
+/* mobile view ends in here */

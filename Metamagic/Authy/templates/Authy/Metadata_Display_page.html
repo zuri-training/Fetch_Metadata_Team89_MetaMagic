@@ -1,21 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="metadata_css\metadatadisplay.css" />
+    <link rel="stylesheet" href="{% static 'metadata_css\metadatadisplay.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <script src="metadata.js"></script>
+    <script src="{% static 'js/metadata.js' %}"></script>
     <title>Metadata Display</title>
   </head>
 
   <body>
+    {% block content %}
     <div class="flex-container">
       <!-- NAVIGATION BAR STARTS-->
       <div class="flex-child magenta">
@@ -23,11 +25,11 @@
 
         <div>
           <div id="logo">
-            <img id="white_logo" src="media/White Logo.png" alt="" />
+            <img id="{% static 'white_logo" src="media/White Logo.png' %}" alt="" />
             <img
               id="close_icon"
               onclick="yokes()"
-              src="media/delete-circled-outline.png"
+              src="{% static 'media/delete-circled-outline.png' %}"
               alt=""
             />
           </div>
@@ -36,7 +38,7 @@
           <!-- USER NAME  -->
           <div id="user_profile">
             <div id="profile_image">
-              <img src="media\Frame 2.png" alt="" />
+              <img src="{% static 'media\Frame 2.png' %}" alt="" />
             </div>
             <div id="userame_jobtype">
               <div id="username">
@@ -54,24 +56,24 @@
         <ul>
           <li>
             <a href="#profile"
-              ><img src="media/user.png" alt="" /> &nbsp;&nbsp; Profile</a
+              ><img src="{% static 'media/user.png' %}" alt="" /> &nbsp;&nbsp; Profile</a
             >
           </li>
           <li>
             <a href="#dashboard"
-              ><img src="media/report-columns.png" alt="" />&nbsp;&nbsp;&nbsp;
+              ><img src="{% static 'media/report-columns.png' %}" alt="" />&nbsp;&nbsp;&nbsp;
               Dashboard
             </a>
           </li>
           <li>
             <a href="#upload_and_extract"
-              ><img src="media/upload.png" alt="" /> &nbsp; Upload & Extract</a
+              ><img src="{% static 'media/upload.png' %}" alt="" /> &nbsp; Upload & Extract</a
             >
           </li>
           <li>
             <a href="#metadata_library" class="active"
               ><img
-                src="media/bookmark-empty-white.png"
+                src="{% static 'media/bookmark-empty-white.png' %}"
                 alt=""
               />&nbsp;&nbsp;&nbsp;Metadata Library</a
             >
@@ -84,7 +86,7 @@
         <ul>
           <li>
             <a href="#logout"
-              ><img src="media/log-out.png" alt="" /> &nbsp;&nbsp; Logout</a
+              ><img src="{% static 'media/log-out.png' %}" alt="" /> &nbsp;&nbsp; Logout</a
             >
           </li>
         </ul>
@@ -105,7 +107,7 @@
         <br /><br />
         <table id="table_deco">
           <tr class="rows">
-            <td> <p class="header"> <img src="media\Vector.png" alt="arrow" /> File Metadata</p></td>
+            <td> <p class="header"> <img src="{% static 'media\Vector.png' %}" alt="arrow" /> File Metadata</p></td>
           
           </tr>
           <tr class="rows">
@@ -167,9 +169,9 @@
             </td>
             <td class="btn_items">
               <div class="value">
-                <img src="media/download-square-outline.svg" alt="download" />
-                <img src="media/share-android.svg" alt="share" />
-                <img src="media\Embed.svg" alt="embedded" />
+                <img src="{% static 'media/download-square-outline.svg' %}" alt="download" />
+                <img src="{% static 'media/share-android.svg' %}" alt="share" />
+                <img src="{% static 'media\Embed.svg' %}" alt="embedded" />
               </div>
             </td>
           </tr>
@@ -177,5 +179,6 @@
         
       </div>
     </div>
+    {% endblock %}
   </body>
 </html>

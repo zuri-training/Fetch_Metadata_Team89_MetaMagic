@@ -23,12 +23,18 @@
                     <br>
                     <form method="POST" action="." id="login-form">
                         {% csrf_token %}
-                    <label class="lbl"><b>Username</b></label>
-                    {{form.username}}
-                    <br>
-                    <label class="lbl"><b>Password</b></label>
-                    {{form.password}}
-                    {% comment %} <input type="password" placeholder="Enter password" name="password" required> {% endcomment %}
+                        {% for field in form %}
+                        <div>
+                            <label class="lbl"><b>{{ field.label }} </b></label> 
+
+                            {{ field }}
+                        <br />
+
+                            {% for error in field.errors %}
+                                <small style="color: red">{{ error }}</small>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
                 </div>
                 <br>
                 <div class="rem">

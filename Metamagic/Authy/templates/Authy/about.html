@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="{% static 'about.css' %}">
 </head>
 <body>
+    {% block content %}
     <header>
         <div>
             <div class="navbr">
-                <img class="logo" src="./img/logo frame.svg" alt="logo" />
+                <img class="logo" src="{% static 'picture/logo frame.svg' %}" alt="logo" />
                 <nav>
                     <ul class="nav-links">
                         <li><a href="#">Home</a></li>
@@ -37,7 +39,7 @@
             </div>
             <div class="img">
                 <picture>
-                    <img src="./img/About Us Infograph Desktop.svg" alt="About Us Image" class="img122">
+                    <img src="{% static 'picture/About Us Infograph Desktop.svg' %}" alt="About Us Image" class="img122">
                 </picture>
             </div>
         </section>
@@ -47,7 +49,7 @@
             </div>
             <div class="img-2">
                 <picture>
-                    <img src="./img/The Magic Team Desktop.svg" alt="The Magic Team" class="img123">
+                    <img src="{% static 'picture/The Magic Team Desktop.svg' %}" alt="The Magic Team" class="img123">
                 </picture>
             </div>
         </section>
@@ -55,7 +57,7 @@
     </main>
     <footer>
         <div>
-            <img class="logo-2" src="./img/logo-2.svg" alt="logo">
+            <img class="logo-2" src="{% static 'picture/logo-2.svg' %}" alt="logo">
             <p class="copyright">Copyright &copy; 2022.</p>
         </div>
         <div class="features">
@@ -93,5 +95,6 @@
             <ul class="disclaim"><li>Disclaimer</li></ul>
         </div>
     </footer>
+    {% endblock %}
 </body>
 </html>

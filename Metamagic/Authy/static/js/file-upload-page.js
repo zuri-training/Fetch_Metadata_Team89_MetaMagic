@@ -53,7 +53,7 @@ function displayFile() {
 	let fileType = file.type;
 
 	//console.log('file has been dropped');
-	let validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/svg', 'image/svg+xml', 'application/pdf', 'application/json', 'text/csv', 'video/mp4',];
+	let validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/svg', 'image/svg+xml', 'application/pdf', 'application/json', 'text/csv', 'video/mp4', 'audio/mp3'];
 
 	if(validExtensions.includes(fileType)) {
 		let fileReader = new FileReader();

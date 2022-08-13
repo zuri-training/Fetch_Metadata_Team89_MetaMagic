@@ -16,7 +16,9 @@ body {
 .center {
     align-items: center;
 }
-
+.rows > td > a{
+    text-decoration: none;
+}
 .header{
     font-family: 'IBM Plex Sans';
         font-style: normal;

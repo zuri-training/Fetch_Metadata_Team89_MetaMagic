@@ -71,7 +71,7 @@
             >
           </li>
           <li>
-            <a class="active"
+            <a class="active" href="{% url 'Authy:metamodal' %}"
               ><img
                 src="{% static 'media/bookmark-empty-white.png' %}"
                 alt=""
@@ -107,7 +107,7 @@
         <br /><br />
         <table id="table_deco">
           <tr class="rows">
-            <td> <p class="header"> <img src="{% static 'media\Vector.png' %}" alt="arrow" /> File Metadata</p></td>
+            <td> <a href="{% url 'Authy:upload' %}"><p class="header"> <img src="{% static 'media\Vector.png' %}" alt="arrow" /> File Metadata</p></td></a>
           
           </tr>
           <tr class="rows">

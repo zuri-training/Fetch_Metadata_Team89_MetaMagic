@@ -110,58 +110,15 @@
             <td> <a href="{% url 'Authy:upload' %}"><p class="header"> <img src="{% static 'media\Vector.png' %}" alt="arrow" /> File Metadata</p></td></a>
           
           </tr>
-          <tr class="rows">
-            <td>File Name</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>File Size</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>File Type</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>File Extension</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>File Category</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>Author/Creator</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>Storage Location</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>Date Created</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>Date Created</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>Date Modified</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>Last Edited</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>Format</td>
-            <td class="value">Value</td>
-          </tr>
-          <tr class="rows">
-            <td>Copyright</td>
-            <td class="value">Value</td>
-          </tr>
+          {% if metadata %}
+            {% for data in metadata %}
+            <tr class="rows">
+              <td>{{ data.tag_name }}</td>
+              <td class="value">{{ data.tag_value }}</td>
+            </tr>
+            {% endfor %}
+          {% endif %}
+          
           <tr class="rows">
             <td class="btn_items">
               <br /><a href="#"

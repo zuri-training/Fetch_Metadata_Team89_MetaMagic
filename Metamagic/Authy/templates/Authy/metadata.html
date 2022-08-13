@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static'metadata_css/metadata.css' %}" />
+    <link rel="stylesheet" href="{% static 'metadata_css/metadata.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -69,7 +69,7 @@
         </div>
         <div id="logout">
           <div id="icon"><img src="{% static 'media/log-out.png' %}" alt="" /></div>
-          <div id="log">Logout</div>
+          <div id="log"><a href="{% url 'Authy:logout' %}">Logout</a></div>
         </div>
       </div>
     </div>

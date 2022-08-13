@@ -6,9 +6,18 @@ from django.contrib.auth import views as auth_views
 app_name = "Authy"
 
 urlpatterns = [
+    path('home/', views.home, name='home'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    path("accounts/", include("django.contrib.auth.urls")),
-    path("register/", views.register, name="register"),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('register/', views.register, name='register'),
+    path('upload/', views.upload, name='upload'),
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
+    path('metadisplay/', views.metadisplay, name='metadisplay'),
+    path('profile/', views.profile, name='profile'),
+    path('metalibrary/', views.metalibrary, name='metalibrary'),
+    path('metadata/', views.metamodal, name='metamodal'),
+
 
     # reset password urls#######
     path('password_reset/',auth_views.PasswordResetView.as_view(),name='password_reset'),

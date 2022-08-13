@@ -17,14 +17,14 @@
                 <img class="logo" src="{% static 'picture/logo frame.svg' %}" alt="logo" />
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="#">Home</a></li>
-                        <li><p class="blue" href="#">About</p></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{% url 'Authy:home' %}">Home</a></li>
+                        <li><p class="blue">About</p></li>
+                        <li><a href="{% url 'Authy:contact' %}">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="but">
-                    <a href="#"><button class="btn btn-secondary">Log In</button></a>
-                    <a href="#"><button class="btn btn-tertiary">Sign Up</button></a>
+                    <a href="{% url 'Authy:login' %}"><button class="btn btn-secondary">Log In</button></a>
+                    <a href="{% url 'Authy:register' %}"><button class="btn btn-tertiary">Sign Up</button></a>
                 </div>
             </div>
         </div>
@@ -63,19 +63,19 @@
         <div class="features">
             <ul>
                 <li class="oran">Features</li>
-                <li><a href="#">Generate Metadata</a></li>
-                <li><a href="#">Save & Download</a></li>
-                <li><a href="#">Embed</a></li>
-                <li><a href="#">Share</a></li>
-                <li><a href="#">Export</a></li>
+                <li><a>Generate Metadata</a></li>
+                <li><a>Save & Download</a></li>
+                <li><a>Embed</a></li>
+                <li><a>Share</a></li>
+                <li><a>Export</a></li>
             </ul>
         </div>
         <div class="quicklinks">
             <ul>
                 <li class="oran">Quicklinks</li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Support</a></li>
-                <li><a href="#">Documentation</a></li>
+                <li><a href="{% url 'Authy:about' %}">About Us</a></li>
+                <li><a href="{% url 'Authy:contact' %}">Contact Support</a></li>
+                <li><a href="https://docs.google.com/document/d/17bwgDRxA6mNDWWl-HUSTkEuZG8i39ip3tEpNJh_AHy8/edit#heading=h.42ji38swbnhs">Documentation</a></li>
             </ul>
         </div>
         <div class="stretch">

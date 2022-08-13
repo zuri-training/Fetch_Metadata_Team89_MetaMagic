@@ -12,7 +12,7 @@
     {% block content %}
     <div class="container">
         <nav>
-        <a href="#"><img class="logo" src="{% static 'img/images/logo frame.svg' %}" alt="logo" /></a>
+        <a href="{% url 'Authy:home' %}"><img class="logo" src="{% static 'img/images/logo frame.svg' %}" alt="logo" /></a>
         </nav>
         <div class="flex">
             <div class="box">
@@ -68,7 +68,7 @@
                 <br>
                 <div>
                     <button type="submit" value="submit" class="btn btn-primary">Sign up</button>
-                    <p>Already have an account? <a href="./login.html">Sign in</a></p>
+                    <p>Already have an account? <a href="{% url 'Authy:login' %}">Sign in</a></p>
                 </div>
             </form>
             </div>

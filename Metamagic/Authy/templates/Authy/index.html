@@ -21,13 +21,13 @@
             </a>
         </div>
         <div class="sidepane-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <p>Home</p>
+            <a href="{% url 'Authy:about' %}">About</a>
+            <a href="{% url 'Authy:contact' %}">Contact</a>
         </div>
         <div class="sidepane-btns">
-            <a href="#"><button class="btn btn-secondary sidepane-btn">Log In</button></a>
-            <a href="#"><button class="btn btn-tertiary sidepane-btn">Sign Up</button></a>
+            <a href="{% url 'Authy:login' %}"><button class="btn btn-secondary sidepane-btn">Log In</button></a>
+            <a href="{% url 'Authy:register' %}"><button class="btn btn-tertiary sidepane-btn">Sign Up</button></a>
         </div>
     </div>
     <header>
@@ -36,13 +36,13 @@
             <nav>
                 <ul class="nav-links">
                     <li><p class="blue">Home</p></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'Authy:about' %}">About</a></li>
+                    <li><a href="{% url 'Authy:contact' %}">Contact</a></li>
                 </ul>
             </nav>
             <div class="but">
-                <a href="#"><button class="btn btn-secondary">Log In</button></a>
-                <a href="#"><button class="btn btn-tertiary">Sign Up</button></a>
+                <a href="{% url 'Authy:login' %}"><button class="btn btn-secondary">Log In</button></a>
+                <a href="{% url 'Authy:register' %}"><button class="btn btn-tertiary">Sign Up</button></a>
             </div>
             <a href="javascript:toggleSidePane()" id="menubar">
                 <img src="{% static 'land/blue-menu.svg' %}" alt="">
@@ -56,7 +56,7 @@
                 <p class="ptag">Know more <br> <span>information</span> about <br> your files</p>
                 <hr>
                 <p class="para">Metamagic is a platform that provides <br> users with all the tools needed to <br> access and generate metadata</p>
-                <a href="#"><button class="btn btn-quart">Get Started</button></a>
+                <a href="{% url 'Authy:register' %}"><button class="btn btn-quart">Get Started</button></a>
             </div>
             <div class="img11-wrapper">
                 <img class="img11" src="{% static 'land/Frame.svg' %}" alt="img11">
@@ -138,7 +138,7 @@
         <br> -->
         <div class="box-6">
             <p class="para-5">Start generating metadata.</p>
-            <button class="btn btn-primary">Sign up for free</button>
+            <a href="{% url 'Authy:register' %}"><button class="btn btn-primary">Sign up for free</button></a>
         </div>
     </main>
     <footer>
@@ -156,9 +156,9 @@
         </div>
         <div class="quicklinks">
             <p class="oran">Quicklinks</p>
-            <a href="#">About Us</a>
-            <a href="#">Contact Support</a>
-            <a href="#">Documentation</a>
+            <a href="{% url 'Authy:about' %}">About Us</a>
+            <a href="{% url 'Authy:contact' %}">Contact Support</a>
+            <a href="https://docs.google.com/document/d/17bwgDRxA6mNDWWl-HUSTkEuZG8i39ip3tEpNJh_AHy8/edit#heading=h.42ji38swbnhs">Documentation</a>
         </div>
         <div class="stretch">
             <div class="icons">

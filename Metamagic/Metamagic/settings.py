@@ -120,11 +120,13 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'Metamagic/static',
 ]
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-LOGIN_REDIRECT_URL = 'dashboard'
-LOGOUT_REDIRECT_URL = "dashboard"
+LOGIN_REDIRECT_URL = 'Authy:dashboard'
+LOGOUT_REDIRECT_URL = 'Authy:home'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

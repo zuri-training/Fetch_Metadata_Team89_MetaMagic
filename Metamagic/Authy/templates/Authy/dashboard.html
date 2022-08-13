@@ -67,9 +67,7 @@
                 <div id="logout">
                     <div id="icon"><img src="{% static 'assets/icons/log-out.png' %}" alt="logout button"></div>
                     <div id="log">
-                        {% if user.is_authenticated %}
-                        <a href="{% url 'logout' %}">Logout</a>
-                        {% endif %}
+                        <a href="{% url 'Authy:logout' %}">Logout</a>
                     </div>
                     
                 </div>
@@ -101,7 +99,7 @@
                         <a id="notif-bing" href="javascript:showNotif()">
                             <img src="{% static 'assets/icons/white-notification-bing.svg' %}" alt="Notifications">
                         </a>
-                        <a class="user" href="#">
+                        <a class="user" href="{% url 'Authy:profile' %}">
                             <img src="{% static 'assets/icons/white-user.svg' %}" alt="User">
                         </a>
                     </div>
@@ -483,7 +481,7 @@
                     </div>
                     <div class="files-item">
                         <span class="files-img">
-                            <img src="{'% static assets/icons/white-page.svg' %}" alt="">
+                            <img src="{% static 'assets/icons/white-page.svg' %}" alt="">
                         </span>
                         <p>CSV</p>
                     </div>

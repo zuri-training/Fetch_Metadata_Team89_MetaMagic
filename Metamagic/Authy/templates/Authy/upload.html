@@ -20,41 +20,47 @@
 			</div>
   			<div class="user-profile">
 			<div class= "img-border">
-				<div class="profile-image"><img src="001.jpg"></div>
+				<div class="profile-image"><img src="{% static '001.jpg' %}"></div>
 			</div>
 			<div class="profile-details">
 				<h3>Demolola Daniels</h3>
 				<p>Metadata Analyst</p>
 			</div>
 			</div>
-			<a href="#" class="user-link"><div  class="user"><img src="{% static 'img/Img/user.png' %}">Profile</div></a>
-			<a href="#"><div class="user"><img src="{% static 'img/Img/report-columns.png' %}">Dashboard</div></a>
-			<a href="#"><div class="user"><img src="{% static 'img/Img/upload.png' %}">Upload & Extract</div></a>
-			<a href="#"><div class="user"><img src="{% static 'img/Img/bookmark-empty-1.png' %}">Metadata Library</div></a>
-			<a href="#"><div class="user"><img src="{% static 'img/Img/phone.svg' %}">Contact Support</div></a>
-			<a href="#" class="log-out"><div ><img src="{% static 'img/Img/log-out.png' %}"></div></a>
+			<a href="{% url 'Authy:profile' %}" class="user-link"><div  class="user"><img src="{% static 'img/Img/user.png' %}">Profile</div></a>
+			<a href="{% url 'Authy:dashboard' %}"><div class="user"><img src="{% static 'img/Img/report-columns.png' %}">Dashboard</div></a>
+			<a><div class="user"><img src="{% static 'img/Img/upload.png' %}">Upload & Extract</div></a>
+			<a href="{% url 'Authy:metamodal' %}"><div class="user"><img src="{% static 'img/Img/bookmark-empty-1.png' %}">Metadata Library</div></a>
+			<a href="{% url 'Authy:contact' %}"><div class="user"><img src="{% static 'img/Img/phone.svg' %}">Contact Support</div></a>
+			<a href="{% url 'Authy:logout' %}" class="log-out"><div ><img src="{% static 'img/Img/log-out.png' %}"></div>Logout</a>
 		</div>
 		<div class="upload-area">
 			<div class="upload-area-item">
-				<h3><span class="left-arrow"><a href="#"><img src="{% static 'img/img/arrow-left.svg' %}" alt="leftArrow" class="lrft"></a></span>Upload & Extract</h3>
+				<h3><span class="left-arrow"><a href="{% url 'Authy:upload' %}"><img src="{% static 'img/img/arrow-left.svg' %}" alt="leftArrow" class="lrft"></a></span>Upload & Extract</h3>
 				<p>Extract <span class="orange">metadata</span> of your files, ranging from date of creation, file size, edit history and other "hidden information."</p>
 			</div>
-			<div id="box" class="drag-active">
-			  <div class="box-content">
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div id="box" class="drag-active">
+				<div class="box-content">
 					<div class="drag"><img src="{% static 'img/Img/cloud-upload.svg' %}" class="upload-icon">
 						<h3 id="upload-text"><span class="dragtext">Drag and drop a file here</span> or click to upload</h3>
 						<input type="file" name="myFile" class="drop_input" hidden>
-				  </div>
-				  <div class="maxFile"><p>Max file size is 50mb. Your uploads are private and secure.</p>
-				  </div>
+						{% if url %}
+						<p>Uploaded File: <a href="{{ url }}">{{ url }}</a></p>
+						{% endif %}
+					</div>
+					<div class="maxFile">
+						<p>Max file size is 20mb. Your uploads are private and secure.</p>
+					</div>
 				</div>
-			</div>
-			<div class="generate-meta">
-				<form action="#" method="post">
-					<input type="submit" value="Generate Metadata"/>
-				</form>	
-			</div>
-			
+				</div>
+				<div class="generate-meta">
+					<div>
+						<input type="submit" value="Generate Metadata"/>
+					</div>	
+				</div>
+			</form>
 		</div>
 		<div class="supfiles-area">
 			<div class="supfiles-area-item">

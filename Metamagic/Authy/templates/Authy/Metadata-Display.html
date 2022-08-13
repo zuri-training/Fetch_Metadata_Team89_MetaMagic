@@ -55,23 +55,23 @@
         <!-- NAVIGATION  LINKS STARTS-->
         <ul>
           <li>
-            <a href="#profile"
+            <a href="{% url 'Authy:profile' %}"
               ><img src="{% static 'media/user.png' %}" alt="" /> &nbsp;&nbsp; Profile</a
             >
           </li>
           <li>
-            <a href="#dashboard"
+            <a href="{% url 'Authy:dashboard' %}"
               ><img src="{% static 'media/report-columns.png' %}" alt="" />&nbsp;&nbsp;&nbsp;
               Dashboard
             </a>
           </li>
           <li>
-            <a href="#upload_and_extract"
+            <a href="{% url 'Authy:upload' %}"
               ><img src="{% static 'media/upload.png' %}" alt="" /> &nbsp; Upload & Extract</a
             >
           </li>
           <li>
-            <a href="#metadata_library" class="active"
+            <a class="active"
               ><img
                 src="{% static 'media/bookmark-empty-white.png' %}"
                 alt=""
@@ -85,7 +85,7 @@
         <!-- LOGOUT BUTTON  -->
         <ul>
           <li>
-            <a href="#logout"
+            <a href="{% url 'Authy:logout' %}"
               ><img src="{% static 'media/log-out.png' %}" alt="" /> &nbsp;&nbsp; Logout</a
             >
           </li>

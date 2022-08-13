@@ -64,13 +64,13 @@
             </div>
             <div id="logout">
                 <div id="icon"><img src="{% static 'media/log-out.png' %}" alt=""></div>
-               <div id="log">Logout</div>
+               <div id="log"><a href="{% url 'Authy:logout' %}">Logout</a></div>
             </div>
         </div>
 
     </div>
 
-        <div id="main_dashboard">src
+        <div id="main_dashboard">
             <div id="first">
                 <div id="search_bar">
                     <div id="search_icon"><img src="{% static 'media/search-normal.png' %}" alt=""></div>

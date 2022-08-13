@@ -4,6 +4,7 @@ from django.contrib.auth import login
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
@@ -46,7 +47,7 @@ def register(request):
             form.save()
 
             messages.success(request, f'Your account has been created. You can log in now!')    
-            return redirect('dashboard')
+            return redirect('login')
     else:
         form = NewUserForm()
 
@@ -54,3 +55,40 @@ def register(request):
     return render(request, "registration/register.html", context)
 
     
+def upload(request):
+    context = {}
+    if request.method == 'POST':
+        uploaded_file = request.FILES["myFile"]
+        fs = FileSystemStorage()
+        name = fs.save(uploaded_file.name, uploaded_file)
+        context['url'] = fs.url(name)
+    return render(request, "Authy/upload.html", context)
+
+
+# def index(request):
+#     context = {}
+#     if request.method == 'POST':
+#         username = request.POST['username']
+#         context = {'username': username}
+#     return render(request, "index.html", context)
+
+def home(request):
+    return render(request, "Authy/index.html")
+
+def contact(request):
+    return render(request, "Authy/contact.html")
+
+def about(request):
+    return render(request, "Authy/about.html")
+
+def metadisplay(request):
+    return render(request, "Authy/Metadata-Display.html")
+
+def metalibrary(request):
+    return render(request, "Authy/metadata-library.html")
+
+def profile(request):
+    return render(request, "Authy/metadata-profile.html")
+
+def metamodal(request):
+    return render(request, "Authy/metadata.html")

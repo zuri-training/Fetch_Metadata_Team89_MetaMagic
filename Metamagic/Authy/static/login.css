@@ -16,7 +16,7 @@ body {
     max-width: 100%;
     overflow: hidden;
 }
-input[type=text], input[type=password]{
+input[type=text], input[type=password], input[type=email]{
     display: flex;
     flex-direction: row;
     align-items: center;

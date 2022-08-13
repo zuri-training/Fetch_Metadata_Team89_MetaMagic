@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>File Upload Page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'fileUploadPage.css' %}">
+	
+</head>
+<body>
+	{% block content %}
+	<main>
+		<div class="profile-area">
+			<div id="logo-container">
+		  		<img src="{% static 'img/Img/White Logo.png' %}" class="meta-logo">
+			</div>
+  			<div class="user-profile">
+			<div class= "img-border">
+				<div class="profile-image"><img src="{% static '001.jpg' %}"></div>
+			</div>
+			<div class="profile-details">
+				<h3>Demolola Daniels</h3>
+				<p>Metadata Analyst</p>
+			</div>
+			</div>
+			<a href="{% url 'Authy:profile' %}" class="user-link"><div  class="user"><img src="{% static 'img/Img/user.png' %}">Profile</div></a>
+			<a href="{% url 'Authy:dashboard' %}"><div class="user"><img src="{% static 'img/Img/report-columns.png' %}">Dashboard</div></a>
+			<a><div class="user"><img src="{% static 'img/Img/upload.png' %}">Upload & Extract</div></a>
+			<a href="{% url 'Authy:metamodal' %}"><div class="user"><img src="{% static 'img/Img/bookmark-empty-1.png' %}">Metadata Library</div></a>
+			<a href="{% url 'Authy:contact' %}"><div class="user"><img src="{% static 'img/Img/phone.svg' %}">Contact Support</div></a>
+			<a href="{% url 'Authy:logout' %}" class="log-out"><div ><img src="{% static 'img/Img/log-out.png' %}"></div>Logout</a>
+		</div>
+		<div class="upload-area">
+			<div class="upload-area-item">
+				<h3><span class="left-arrow"><a href="{% url 'Authy:upload' %}"><img src="{% static 'img/img/arrow-left.svg' %}" alt="leftArrow" class="lrft"></a></span>Upload & Extract</h3>
+				<p>Extract <span class="orange">metadata</span> of your files, ranging from date of creation, file size, edit history and other "hidden information."</p>
+			</div>
+			<form method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div id="box" class="drag-active">
+				<div class="box-content">
+					<div class="drag"><img src="{% static 'img/Img/cloud-upload.svg' %}" class="upload-icon">
+						<h3 id="upload-text"><span class="dragtext">Drag and drop a file here</span> or click to upload</h3>
+						<input type="file" name="myFile" class="drop_input" hidden>
+						{% if url %}
+						<p>Uploaded File: <a href="{{ url }}">{{ url }}</a></p>
+						{% endif %}
+					</div>
+					<div class="maxFile">
+						<p>Max file size is 20mb. Your uploads are private and secure.</p>
+					</div>
+				</div>
+				</div>
+				<div class="generate-meta">
+					<div>
+						<input type="submit" value="Generate Metadata"/>
+					</div>	
+				</div>
+			</form>
+		</div>
+		<div class="supfiles-area">
+			<div class="supfiles-area-item">
+				<h3>Supported File Types</h3>
+				<p>Images (jpg, png, svg)</p>
+				<p>CSV</p>
+				<p>PDF</p>
+				<p>JSON</p>
+			</div>
+			<div class="meta-key-items">
+			  <h3>Meta keys</h3>
+  			 <div class="mobi-left">
+    			<p>File Name</p>
+    			<p>File Size</p>
+    			<p>File Type</p>
+    			<p>File Extension</p>
+    			<p>Category</p>
+    			<p>Author/Creator</p>
+				 </div>
+				 <div class="mobi-right">
+  				<p>Storage Location</p>
+  				<p>Date Created</p>
+  				<p>Date Modified</p>
+  				<p>Last Edited</p>
+  				<p>Format</p>
+  				<p>Copyright</p>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<script src="{% static 'js/file-upload-page.js' %}"></script>
+	{% endblock %}
+</body>
+</html>

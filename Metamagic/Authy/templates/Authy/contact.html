@@ -1,28 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Contact Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
 </head>
 <body>
+    {% block content %}
     <header>
         <div>
             <div class="navbr">
-                <img class="logo" src="./img/logo frame.svg" alt="logo" />
+                <img class="logo" src="{% static 'pic/logo frame.svg' %}" alt="logo" />
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><p class="blue" href="#">Contact</p></li>
+                        <li><a href="{% url 'Authy:home' %}">Home</a></li>
+                        <li><a href="{% url 'Authy:about' %}">About</a></li>
+                        <li><p class="blue">Contact</p></li>
                     </ul>
                 </nav>
                 <div class="but">
-                    <a href="#"><button class="btn btn-secondary">Log In</button></a>
-                    <a href="#"><button class="btn btn-tertiary">Sign Up</button></a>
+                    <a href="{% url 'Authy:login' %}"><button class="btn btn-secondary">Log In</button></a>
+                    <a href="{% url 'Authy:register' %}"><button class="btn btn-tertiary">Sign Up</button></a>
                 </div>
             </div>
         </div>
@@ -34,13 +36,13 @@
                 <p class="editme">Thank you for getting in touch!</p>
             </div>
             <div class="img-1">
-                <img src="./img/discussion.svg" alt="discussion-illustration">
+                <img src="{% static 'pic/discussion.svg' %}" alt="discussion-illustration">
             </div>
         </div>
         <div class="box-2">
             <div class="chat">
                 <div class="img-2">
-                    <img src="./img/chat.svg" alt="chat-picture">
+                    <img src="{% static 'pic/chat.svg' %}" alt="chat-picture">
                 </div>
                 <h2>Say Hi!</h2>
                 <p class="todo">We'd like to talk to you.</p>
@@ -58,13 +60,13 @@
                 <label class="lbl"><b>Your Message</b></label>
                 <input class="letter" type="text" placeholder="Cover letter">
                 <br>
-                <button type="button" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </main>
     <footer>
         <div>
-            <img class="logo-2" src="./img/logo-2.svg" alt="logo">
+            <img class="logo-2" src="{% static 'pic/logo-2.svg' %}" alt="logo">
             <p class="copyright">Copyright &copy; 2022.</p>
         </div>
         <div class="features">
@@ -80,9 +82,9 @@
         <div class="quicklinks">
             <ul>
                 <li class="oran">Quicklinks</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Documentation</a></li>
+                <li><a href="{% url 'Authy:home' %}">Home</a></li>
+                <li><a href="{% url 'Authy:about' %}">About Us</a></li>
+                <li><a href="https://docs.google.com/document/d/17bwgDRxA6mNDWWl-HUSTkEuZG8i39ip3tEpNJh_AHy8/edit#heading=h.42ji38swbnhs">Documentation</a></li>
             </ul>
         </div>
         <div class="stretch">
@@ -102,5 +104,6 @@
             <ul class="disclaim"><li>Disclaimer</li></ul>
         </div>
     </footer>
+    {% endblock %}
 </body>
 </html>

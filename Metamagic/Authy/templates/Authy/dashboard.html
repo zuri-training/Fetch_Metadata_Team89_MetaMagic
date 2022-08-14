@@ -34,23 +34,25 @@
                 </div>
                 <div id="second_part">
                     <div id="details">
-                        <div id="icon"><img src="{% static 'assets/icons/user.png' %}" alt="icon"></div>
-                        <div id="text">Profile</div>
+                        <div id="icon">
+                            <img src="{% static 'assets/icons/user.png' %}" alt="icon">
+                        </div>
+                        <a id="text" href="{% url 'Authy:profile' %}">Profile</a>
 
                         </div>
                         <div id="details">
                         <div id="icon"><img src="{% static 'assets/icons/report-columns.png' %}" alt="icon"></div>
-                        <div id="text">Dashboard</div>
-
+                        <a id="text" href="{% url 'Authy:dashboard' %}">Dashboard</a>
                         </div>
+                               
                         <div id="details">
                         <div id="icon"><img src="{% static 'assets/icons/upload.png' %}" alt="icon"></div>
-                        <div id="text">Upload & Extract</div>
+                        <a id="text" href="{% url 'Authy:upload' %}">Upload & Extract</a>
 
                         </div>
                         <div id="details">
                         <div id="icon"><img src="{% static 'assets/icons/bookmark-empty.png' %}" alt="icon"></div>
-                        <div id="text">Metadata Library</div>
+                        <a id="text" href="{% url 'Authy:metalibrary' %}">Metadata Library</a>
                     </div>
                 </div>
 
@@ -61,7 +63,7 @@
                         <img src="{% static 'assets/images/Contact-support.png' %}" alt="contact support image">
                     </div>
                     <div id="support_button">
-                        <input type="button" value="Contact Support">
+                        <a href="{% url 'Authy:contact' %}"><input type="button" value="Contact Support"></a>
                     </div>
                 </div>
                 <div id="logout">
@@ -127,10 +129,10 @@
                     <p class="welcome-text">What would you like to do today?</p>
                 </div>
                 <div class="cta-btns">
-                    <button class="primary-btn upload-btn">
+                    <a href= "{% url 'Authy:upload' %}"><button class="primary-btn upload-btn">
                         <img src="{% static 'assets/icons/plus-white.png' %}" alt="Add" id="plus-icon">
                         Upload File
-                    </button>
+                    </button></a>
                     <button class="secondary-btn">
                         View Saved Metadata
                     </button>
@@ -394,7 +396,7 @@
                         <div class="spo-userinfo"> <!--  -->
                             <span><img src="{% static 'assets/images/download.jpeg' %}" alt="" class="spo-img"></span>
                             <div class="spo-uid">
-                                <p class="spo-blue-text" id="spo-name">Demola Daniels</p>
+                                <p class="spo-blue-text" id="spo-name">{{ user.username|default:'Guest' }}</p>
                                 <small class="spo-small-text" id="spo-mail">demoladaniels@gmail.com</small>  
                             </div>
                         </div>

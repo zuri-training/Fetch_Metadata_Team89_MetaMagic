@@ -122,7 +122,7 @@ text-align: right;
 /* .pagesize {
     height: 200px;
     width: 50%; */
-}
+/* } */
 
 #logo {
     position: relative;
@@ -227,6 +227,7 @@ text-align: right;
     font-weight: 500;
     font-size: 20px;
     color: #196DDC;
+    text-decoration: none;
 }
 
 #bottom_sidebar {

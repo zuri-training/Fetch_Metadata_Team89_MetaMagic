@@ -16,6 +16,9 @@
     <title>Metadata Display</title>
   </head>
 
+
+
+  
   <body>
     {% block content %}
     <div class="flex-container">
@@ -25,7 +28,7 @@
 
         <div>
           <div id="logo">
-            <img id="{% static 'white_logo" src="media/White Logo.png' %}" alt="" />
+            <img id="{% static 'img/images/logo frame.svg' %}" alt="" />
             <img
               id="close_icon"
               onclick="yokes()"
@@ -37,12 +40,13 @@
 
           <!-- USER NAME  -->
           <div id="user_profile">
+            <img id="white logo" src="{% static 'img/images/logo frame.svg' %}" alt="" />
             <div id="profile_image">
               <img src="{% static 'media\Frame 2.png' %}" alt="" />
             </div>
             <div id="userame_jobtype">
               <div id="username">
-                <p>Demola Daniels</p>
+                <p>{{ user.username|default:'Guest' }}</p>
               </div>
               <p class="center">Metadata Analyst</p>
             </div>

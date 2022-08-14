@@ -23,7 +23,7 @@
 				<div class="profile-image"><img src="{% static '001.jpg' %}"></div>
 			</div>
 			<div class="profile-details">
-				<h3>Demolola Daniels</h3>
+				<h3>{{ user.username|default:'Guest' }}</h3>
 				<p>Metadata Analyst</p>
 			</div>
 			</div>

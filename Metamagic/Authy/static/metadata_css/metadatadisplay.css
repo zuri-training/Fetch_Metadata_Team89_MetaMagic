@@ -5,6 +5,50 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-dashboard:before {
+    content: "\e900";
+  }
+  .icon-library:before {
+    content: "\e901";
+  }
+  .icon-log-out:before {
+    content: "\e902";
+  }
+  .icon-phone:before {
+    content: "\e903";
+  }
+  .icon-upload:before {
+    content: "\e904";
+  }
+  .icon-userusers:before {
+    content: "\e905";
+  }
+.metanalyst{
+    font-size: 30px;
+}
+.log-out{
+    margin-top: 100px;
+}
+.profile-area{
+    margin-top: -300px;
+}
+
 body {
     display: flex;
     background-color: #E5E6E6;
@@ -94,7 +138,7 @@ li a:active {
     display: flex;
     padding: 20px;
     background-color: white;
-position: relative;
+
     width: 1540px;
     height: 1250px;
     padding-right: 40%;
@@ -112,6 +156,123 @@ position: relative;
     margin-right: 40px;
     
 }
+.profile-area{
+	background-color: #FFFFFF;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.profile-area div{
+	text-align: center; 
+}
+
+#logo-container{
+  margin-top: 48px;
+  
+}
+
+.meta-logo{
+	width: 264px;
+	height: 48.4px;
+}
+a{
+  text-decoration: none;
+}
+.user-profile{
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.img-border{
+    /* Create the circle */
+    width: 112px;
+    height: 112px;
+    border: 4px solid #FC7C1C; 
+    border-radius: 120%;
+    /* Halve the circle */
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    /* Rotate the circle */
+    transform: rotate(-20deg);
+}
+  
+.profile-image img{
+  width: 102px;
+  height: 102px;
+  border-radius: 100px;
+  transform: rotate(20deg);
+}
+.profile-details{
+  margin-top: 8px;
+}
+
+.profile-details h3{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #196DDC;
+}
+
+.profile-details p{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+
+.user{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 8px 92px 8px 48px;
+	gap: 8px;
+	width: 348px;
+	height: 62px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #196DDC;
+}
+
+.user:hover{
+  background: #C8E1E1;
+}
+
+
+.user:active {
+  background-color: #196DDC;
+  color: #FFFFFF;
+}
+
+
+
+.support{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 216px;
+  padding: 8px 92px 8px 48px;
+	gap: 8px;
+ 
+}
+
+
+.log-out{
+  display: flex;
+  margin-top: auto;
+  width: 100%;
+  margin-bottom: 100px;
+  align-items: center;
+	padding: 8px 92px 8px 48px;
+	gap: 8px;
+	height: 46px;
+}
+
 /* Flex container ends  */
 
 .value {
@@ -227,7 +388,6 @@ text-align: right;
     font-weight: 500;
     font-size: 20px;
     color: #196DDC;
-    text-decoration: none;
 }
 
 #bottom_sidebar {

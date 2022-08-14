@@ -155,6 +155,9 @@ body{
 #log {
   text-decoration: none;
 }
+#support_button{
+  text-decoration: none;
+}
 #logout{
   position: absolute;
   display: flex;

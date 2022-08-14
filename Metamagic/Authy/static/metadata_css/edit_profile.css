@@ -115,6 +115,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 20px;
 color: #196DDC;
+text-decoration: none;
 }
 #bottom_sidebar{
     position: relative;
@@ -149,13 +150,14 @@ color: #196DDC;
     color: #FFFFFF;
     background: #196DDC;
     border-radius: 4px;
+    text-decoration: none;
 }
 #logout{
     display: flex;
     flex-direction: row;
     align-items: center;
     color: #196DDC;
-    
+    text-decoration: none;
 }
 #main_dashboard{
     position: relative;

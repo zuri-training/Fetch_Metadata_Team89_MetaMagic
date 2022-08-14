@@ -16,7 +16,7 @@ urlpatterns = [
     path('metadisplay/', views.metadisplay, name='metadisplay'),
     path('profile/', views.profile, name='profile'),
     path('metalibrary/', views.metalibrary, name='metalibrary'),
-    path('metadata/', views.metamodal, name='metamodal'),
+    # path('metadata/', views.metamodal, name='metamodal'),
 
 
     # reset password urls#######

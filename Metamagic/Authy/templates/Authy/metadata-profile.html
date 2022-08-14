@@ -24,30 +24,31 @@
                  <div id="profile_image"><img  id="profile-picture"src="{% static 'media/download.jpeg' %}" alt=""></div>
                  <div id="userame_jobtype">
                         <div id="username">
-                            <p>Demola Daniels</p>
+                            <p>{{ user.username|default:'Guest' }}</p>
                         </div>
                         <div id="jobtype">Metadata Analyst</div>
                     </div>
             </div>
             <div id="second_part">
-                <div id="details">
-                <div id="icon"><img src="{% static 'media/user.png' %}" alt=""></div>
-                <div id="text">Profile</div>
 
-                </div>
-                <div id="details">
-                <div id="icon"><img src="{% static 'media/report-columns.png' %}" alt=""></div>
-                <div id="text">Dashboard</div>
-
-                </div>
-                <div id="details">
-                <div id="icon"><img src="{% static 'media/upload.png' %}" alt=""></div>
-                <div id="text">Upload & Extract</div>
-
-                </div>
                 <div id="details" class="active">
-                <div id="icon"><img src="{% static 'media/bookmark-empty-white.png' %}" alt=""></div>
-                <div id="text" class="active"><p>Metadata Library</p></div>
+                    <div id="icon"><img src="{% static 'media/bookmark-empty-white.png' %}" alt=""></div>
+                    <a href="{% url 'Authy:profile' %}"><div id="text" class="active"><p>Profile</p></div></a>
+
+                </div>
+                <div id="details">
+                    <div id="icon"><img src="{% static 'media/report-columns.png' %}" alt=""></div>
+                    <a href="{% url 'Authy:dashboard' %}"><div id="text">Dashboard</div></a>
+
+                </div>
+                <div id="details">
+                    <div id="icon"><img src="{% static 'media/upload.png' %}" alt=""></div>
+                    <a href="{% url 'Authy:upload' %}"><div id="text">Upload & Extract</div></a>
+
+                </div>
+                <div id="details">
+                    <div id="icon"><img src="{% static 'media/user.png' %}" alt=""></div>
+                    <a href="{% url 'Authy:metalibrary' %}"><div id="text">Metadata Library</div></a>
 
                 </div>
             </div>
@@ -59,7 +60,7 @@
                     <img src="{% static 'media/Contact-support.png' %}" alt="">
                 </div>
                 <div id="support_button">
-                    <input type="button" value="Contact Support">
+                    <a href="{% url 'Authy:contact' %}"><input type="button" value="Contact Support"></a>
                 </div>
             </div>
             <div id="logout">

@@ -106,5 +106,5 @@ def metalibrary(request):
 def profile(request):
     return render(request, "Authy/metadata-profile.html")
 
-def metamodal(request):
-    return render(request, "Authy/metadata.html")
+# def metamodal(request):
+#     return render(request, "Authy/metadata.html")

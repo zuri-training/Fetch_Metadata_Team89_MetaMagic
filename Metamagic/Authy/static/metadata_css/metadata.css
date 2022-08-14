@@ -19,6 +19,12 @@ body{
     margin-left: 42px;
 }
 
+#support_button{
+    text-decoration: none;
+}
+#log{
+    text-decoration: none;
+}
 #dashboard_details{
     position:relative;
     left: 0px;
@@ -102,6 +108,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 20px;
 color: #196DDC;
+text-decoration: none;
 }
 #bottom_sidebar{
     position: relative;
@@ -142,7 +149,7 @@ color: #196DDC;
     flex-direction: row;
     align-items: center;
     color: #196DDC;
-    
+    text-decoration: none;
 }
 #main_dashboard{
     position: relative;

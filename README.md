@@ -43,8 +43,8 @@ pip install -r requirements.txt
 ### Set up the Database
 
 ```bash
+python manage.py makemigrations
 python manage.py migrate
-python makemigrations metadata
 ```
 
 ### Run the Server
